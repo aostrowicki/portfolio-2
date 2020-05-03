@@ -4,7 +4,16 @@ body{
     padding:0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans:wght@400;700&family=Quicksand&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+
+main{
+    margin-left: 220px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans:wght@400;600;700&family=Quicksand&display=swap');
 
 $color-primary:#FF1E56;
 $color-light:#474747;
@@ -12,17 +21,28 @@ $color-medium:#232323;
 $color-dark:#0D0D0D;
 
 .header{
-    font: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight:700;
     font-size: 4em;
     color: white;
 }
 
 .subheader{
-    font: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight:400;
     font-size: 2em;
     color: white;
+}
+
+.subtitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
+    font-size: 18px;
+    color: white;
+
+    span{
+        color:$color-primary;
+    }
 }
 
 .paragraph{
@@ -31,25 +51,69 @@ $color-dark:#0D0D0D;
     color: white;
 }
 
-ul{
-    list-style: none;
-    margin:0;
-    padding:0;
-}
-
 .link {
     font-family: 'Heebo', sans-serif;
     font-size: 1em;
     color: $color-light;
     position: relative;
+    transition: all 0.15s ease-in-out;
+
+    &:hover{
+        color:white;
+    }
 
     &.active{
         color:white;
     }
 }
 
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
 
-/////////////////////
+a{
+    color:unset;
+    text-decoration: none;
+    display:inline-block;
+}
+
+.btn{
+    color:white;
+    background:$color-primary;
+    display: inline-block;
+    padding: 1em;
+    min-width: 220px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+
+    img{
+        vertical-align: middle;
+        transform:translateX(1em);
+        transition: all 0.15s ease-in-out;
+    }
+
+    &.right:hover{
+        img{
+            transform:translateX(1.4em);
+        }
+    }
+
+    &.down:hover{
+        img{
+            transform:translate(1em,0.3em);  
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////   COMPONENTS
+
+//////////////////////////// SIDEBAR
 
 
 .sidebar{
@@ -67,7 +131,7 @@ ul{
         text-align: center;
     }
 
-    .navigation{
+    .menu{
         position: relative;
         line-height: 3;
 
@@ -93,6 +157,7 @@ ul{
         left:-2em;
         top:calc(50% - 0.3em);
         border-radius: 50%;
+        transition: all 0.15s ease-in-out;
     }
 
     .link.active::before{
@@ -102,8 +167,37 @@ ul{
         left:calc(-2em - 8px);
     }
 
-    .scroll img{
-        margin-bottom: 0.5em;
+    .scroll {
+        img{
+            margin-bottom: 0.5em;
+            transition: all 0.15s ease-in-out;
+        }
+
+        &:hover img{
+            transform: translateY(5px);
+        }       
     }
 }
 
+
+//////////////////////////// HERO
+
+#home{
+
+
+    .img img{
+        height:400px;
+    }
+}
+
+
+#about{
+    span{
+        display:block;
+        padding-top:1em;
+    }
+
+    .img img{
+        height:400px;
+    }
+}
