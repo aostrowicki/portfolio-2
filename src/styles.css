@@ -10,7 +10,17 @@ body {
   padding: 0;
 }
 
-main {
+*::-moz-selection {
+  background: rgba(255, 30, 86, 0.99);
+  color: white;
+}
+
+*::selection {
+  background: rgba(255, 30, 86, 0.99);
+  color: white;
+}
+
+.push {
   margin-left: 220px;
 }
 

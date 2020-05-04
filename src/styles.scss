@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans:wght@400;600;700&family=Quicksand&display=swap');
+
+$color-primary:#FF1E56;
+$color-light:#474747;
+$color-medium:#232323;
+$color-dark:#0D0D0D;
+
 body{
     background:black;
     margin:0;
@@ -7,18 +14,17 @@ body{
 *{
     margin:0;
     padding:0;
+
+    &::selection{
+        background:rgba($color-primary,0.99);
+        color:white;
+    }
 }
 
-main{
+.push{
     margin-left: 220px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans:wght@400;600;700&family=Quicksand&display=swap');
-
-$color-primary:#FF1E56;
-$color-light:#474747;
-$color-medium:#232323;
-$color-dark:#0D0D0D;
 
 .header{
     font-family: 'Open Sans', sans-serif;
