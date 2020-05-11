@@ -17,7 +17,7 @@ export default function Sidebar() {
 
             <div className="menu">
                 <ul>
-                    <li><a href="#home" className={(active === 'home' ? 'link active' : 'link')} onClick={() => setActive('home')}>Home</a></li>
+                    <li><a href="#hero" className={(active === 'home' ? 'link active' : 'link')} onClick={() => setActive('home')}>Home</a></li>
                     <li><a href="#about" className={(active === 'about' ? 'link active' : 'link')} onClick={() => setActive('about')}>About me</a></li>
                     <li><a href="#what" className={(active === 'what' ? 'link active' : 'link')} onClick={() => setActive('what')}>What I do</a></li>
                     <li><a href="#work" className={(active === 'work' ? 'link active' : 'link')} onClick={() => setActive('work')}>My work</a></li>

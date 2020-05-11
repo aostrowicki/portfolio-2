@@ -40,6 +40,13 @@ body{
     color: white;
 }
 
+.title{
+    font-family: 'Heebo', sans-serif;
+    font-size: 22px;
+    color:white;
+    font-weight: 400;
+}
+
 .subtitle{
     font-family: 'Open Sans', sans-serif;
     font-weight:600;
@@ -49,6 +56,13 @@ body{
     span{
         color:$color-primary;
     }
+}
+
+.description{
+    font-family: 'Heebo', sans-serif;
+    font-size: 1em;
+    color:white;
+    opacity: 20%;
 }
 
 .paragraph{
@@ -85,6 +99,10 @@ a{
     display:inline-block;
 }
 
+.container{
+    padding: 0 140px;
+}
+
 .btn{
     color:white;
     background:$color-primary;
@@ -97,7 +115,16 @@ a{
     position: relative;
     text-align: center;
 
-    img{
+    &.square {
+        min-width: 50px;
+        min-height: 50px;
+
+        img{
+            vertical-align: bottom;
+        }
+    }
+
+    &:not(.square) img{
         vertical-align: middle;
         transform:translateX(1em);
         transition: all 0.15s ease-in-out;
@@ -117,7 +144,7 @@ a{
 }
 
 
-/////////////////////////////////////////////////   COMPONENTS
+/////////////////////////////////////////////////   SECTIONS
 
 //////////////////////////// SIDEBAR
 
@@ -188,22 +215,63 @@ a{
 
 //////////////////////////// HERO
 
-#home{
+#hero{
 
+    .container{
+        text-align: center;
+    }
 
-    .img img{
-        height:400px;
+    .subtitle{
+        padding-top:25vh;
+        margin-bottom: 0.6em;
+    }
+
+    .header{
+        margin-bottom:1.2em;
+    }
+
+    .img{
+        height:580px;
+
+        & img{
+            height:100%;
+        }
     }
 }
 
 
+
+//////////////////////////// ABOUT
+
 #about{
+    height:800px;   
+    display:flex;
+    align-items: center;
+    
+    .container{
+        width:100%;
+        display: flex;
+        align-items: center;
+    }
+
     span{
         display:block;
         padding-top:1em;
     }
 
-    .img img{
-        height:400px;
+    .left{
+        max-width:500px;
+
+        .header{
+            margin-bottom: 30px;
+        }
+
+        .paragraph{
+            margin-bottom: 65px;
+        }
+    }
+    
+    .right{
+
     }
 }

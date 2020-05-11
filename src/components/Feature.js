@@ -7,7 +7,7 @@ export default function Feature({ title, list, img }) {
             <h4 className="subheader">{title}</h4>
             <ul>
                 {list && list.map(item => {
-                    return <li className="paragraph">{item}</li>
+                    return <li key={item} className="paragraph">{item}</li>
                 })}
             </ul>
         </div>

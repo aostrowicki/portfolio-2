@@ -5,7 +5,7 @@ import hero from '../assets/hero.svg'
 
 export default function Hero() {
     return (
-        <section id="home">
+        <section id="hero">
             <div className="container">
                 <h4 className="subtitle"><span>I'm Adam</span>, Frontend Developer and UI Designer</h4>
                 <h1 className="header">I will do dosadksao sakod</h1>

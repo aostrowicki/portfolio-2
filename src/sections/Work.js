@@ -10,17 +10,18 @@ export default function Work() {
 
     return (
         <section id="work">
-            <h1 className="header">My work</h1>
-            <div className="categories">
-                {categories.map(item => {
-                    return <span className={`link ${active === item ? 'active' : ''}`} onClick={() => setActive(item)}>{item}</span>
-                })}
+            <div className="container">
+                <h1 className="header">My work</h1>
+                <div className="categories">
+                    {categories.map(item => {
+                        return <span key={item} className={`link ${active === item ? 'active' : ''}`} onClick={() => setActive(item)}>{item}</span>
+                    })}
+                </div>
+
+                {active === 'Websites' && <Websites />}
+                {active === 'Icons' && <Icons />}
+                {active === 'Illustrations' && <Illustrations />}
             </div>
-
-            {active === 'Websites' && <Websites />}
-            {active === 'Icons' && <Icons />}
-            {active === 'Illustrations' && <Illustrations />}
-
         </section>
     )
 }

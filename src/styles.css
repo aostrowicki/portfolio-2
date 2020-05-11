@@ -38,6 +38,13 @@ body {
   color: white;
 }
 
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+}
+
 .subtitle {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -47,6 +54,13 @@ body {
 
 .subtitle span {
   color: #FF1E56;
+}
+
+.description {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  color: white;
+  opacity: 20%;
 }
 
 .paragraph {
@@ -84,6 +98,10 @@ a {
   display: inline-block;
 }
 
+.container {
+  padding: 0 140px;
+}
+
 .btn {
   color: white;
   background: #FF1E56;
@@ -97,7 +115,16 @@ a {
   text-align: center;
 }
 
-.btn img {
+.btn.square {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.btn.square img {
+  vertical-align: bottom;
+}
+
+.btn:not(.square) img {
   vertical-align: middle;
   -webkit-transform: translateX(1em);
           transform: translateX(1em);
@@ -188,8 +215,45 @@ a {
           transform: translateY(5px);
 }
 
-#home .img img {
-  height: 400px;
+#hero .container {
+  text-align: center;
+}
+
+#hero .subtitle {
+  padding-top: 25vh;
+  margin-bottom: 0.6em;
+}
+
+#hero .header {
+  margin-bottom: 1.2em;
+}
+
+#hero .img {
+  height: 580px;
+}
+
+#hero .img img {
+  height: 100%;
+}
+
+#about {
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #about span {
@@ -197,7 +261,15 @@ a {
   padding-top: 1em;
 }
 
-#about .img img {
-  height: 400px;
+#about .left {
+  max-width: 500px;
+}
+
+#about .left .header {
+  margin-bottom: 30px;
+}
+
+#about .left .paragraph {
+  margin-bottom: 65px;
 }
 /*# sourceMappingURL=styles.css.map */
