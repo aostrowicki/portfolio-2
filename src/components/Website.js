@@ -3,9 +3,9 @@ import Button from './Button'
 import github from '../assets/github.svg'
 
 export default function Website({ title, description, img }) {
+
     return (
-        <div className="websites-item">
-            <img src={img} alt="" />
+        <div className="websites-item" style={{ backgroundImage: `url(${img})` }}>
             <h4 className="title">{title}</h4>
             <div className="description">{description}</div>
             <Button square>{<img src={github} alt="" />}</Button>
