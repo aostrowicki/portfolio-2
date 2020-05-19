@@ -106,7 +106,7 @@ a{
 }
 
 .container{
-    padding: 0 140px;
+    padding: 0 180px 0 140px;
 }
 
 .btn{
@@ -274,6 +274,7 @@ a{
     .container{
         width:100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -295,7 +296,6 @@ a{
     }
     
     .right{
-        margin-left: 12vw;
         height:500px;
 
         img{
@@ -310,7 +310,6 @@ a{
 
 #what{
     
-
     .container{
         position: relative;
         display: flex;
@@ -368,6 +367,11 @@ a{
 //////////////////////////// WORK
 
 #work{
+    
+    .container{
+        padding: 0 140px;
+    }
+
     .header{
         text-align: center;
     }
@@ -485,12 +489,13 @@ a{
     .illustrations-grid, .icons-grid{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 60px;
+        grid-column-gap: 20px;
+        grid-row-gap: calc(20px + 40px);
 
         .illustrations-item, .icons-item{
             position: relative;
             height:330px;
-            width: 100%;
+            width: calc(100% - 40px);
             cursor:pointer;
 
             .title{
@@ -524,6 +529,71 @@ a{
                     opacity:1;
                 }
             }
+        }
+    }
+}
+
+
+
+//////////////////////////// CONTACT
+
+#contact{
+
+    .container{
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+
+    }
+
+    .left{
+        display:flex;
+        flex-direction: column;
+
+        .img img{
+            width:500px;
+            height:auto;
+        }
+    }
+
+    form{
+        display:flex;
+        flex-direction: column;
+        font-family: 'Heebo', sans-serif;
+        font-size: 1em;
+        color: $color-light;
+
+        input,textarea{
+            border:none;
+            margin-bottom: 1em;
+            color: #fff;
+            
+            &:not([type="submit"]){
+                width:550px;
+                background:none;
+                border:1px solid $color-medium;
+                font-size: 1em; 
+                font-family: 'Heebo', sans-serif;
+                padding:0.7em;
+                resize: none;
+
+                &:focus{
+                    outline-color: $color-light;
+                }
+            }
+
+            &:-webkit-autofill{
+                transition: background-color 1s ease-in-out 550s;
+                color:white;
+            }
+        }
+
+        label{
+            margin-bottom: 0.2em;
+        }
+
+        .btn{
+            width: 230px;
         }
     }
 }

@@ -107,7 +107,7 @@ a {
 }
 
 .container {
-  padding: 0 140px;
+  padding: 0 180px 0 140px;
 }
 
 .btn {
@@ -282,6 +282,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -305,7 +308,6 @@ a {
 }
 
 #about .right {
-  margin-left: 12vw;
   height: 500px;
 }
 
@@ -377,6 +379,10 @@ a {
 
 #what .circle svg {
   width: 1500px;
+}
+
+#work .container {
+  padding: 0 140px;
 }
 
 #work .header {
@@ -494,13 +500,14 @@ a {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px;
+  grid-column-gap: 20px;
+  grid-row-gap: calc(20px + 40px);
 }
 
 #work .illustrations-grid .illustrations-item, #work .illustrations-grid .icons-item, #work .icons-grid .illustrations-item, #work .icons-grid .icons-item {
   position: relative;
   height: 330px;
-  width: 100%;
+  width: calc(100% - 40px);
   cursor: pointer;
 }
 
@@ -534,5 +541,77 @@ a {
 
 #work .illustrations-grid .illustrations-item:hover::before, #work .illustrations-grid .icons-item:hover::before, #work .icons-grid .illustrations-item:hover::before, #work .icons-grid .icons-item:hover::before {
   opacity: 1;
+}
+
+#contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .left .img img {
+  width: 500px;
+  height: auto;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  color: #474747;
+}
+
+#contact form input, #contact form textarea {
+  border: none;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+#contact form input:not([type="submit"]), #contact form textarea:not([type="submit"]) {
+  width: 550px;
+  background: none;
+  border: 1px solid #232323;
+  font-size: 1em;
+  font-family: 'Heebo', sans-serif;
+  padding: 0.7em;
+  resize: none;
+}
+
+#contact form input:not([type="submit"]):focus, #contact form textarea:not([type="submit"]):focus {
+  outline-color: #474747;
+}
+
+#contact form input:-webkit-autofill, #contact form textarea:-webkit-autofill {
+  -webkit-transition: background-color 1s ease-in-out 550s;
+  transition: background-color 1s ease-in-out 550s;
+  color: white;
+}
+
+#contact form label {
+  margin-bottom: 0.2em;
+}
+
+#contact form .btn {
+  width: 230px;
 }
 /*# sourceMappingURL=styles.css.map */
