@@ -8,7 +8,7 @@ export default function Website({ title, description, img }) {
         <div className="websites-item" style={{ backgroundImage: `url(${img})` }}>
             <h4 className="title">{title}</h4>
             <div className="description">{description}</div>
-            <Button square>{<img src={github} alt="" />}</Button>
+            <Button square><img src={github} alt="" /></Button>
         </div>
     )
 }

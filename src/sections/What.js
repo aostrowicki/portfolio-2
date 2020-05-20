@@ -7,9 +7,7 @@ import dev from '../assets/dev.svg'
 export default function What() {
     return (
         <section id="what">
-
             <div className="container">
-
                 <div className="circle">
                     <svg viewBox="0 0 1500 1500" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="0" cy="750" r="750" fill="none" stroke="#232323" strokeWidth="2px" />
