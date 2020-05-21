@@ -29,6 +29,7 @@ body {
 
 .push {
   margin-left: 220px;
+  width: calc(100% - 220px);
 }
 
 .header {
@@ -121,6 +122,7 @@ a {
   border-radius: 30px;
   position: relative;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn.square {
@@ -193,13 +195,14 @@ a {
 
 .divider {
   width: 100%;
-  height: 1px;
-  background: #232323;
+  height: 2px;
+  background: #0D0D0D;
+  margin: 1.5em 0;
 }
 
 .sidebar {
   width: 220px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   background: #0D0D0D;
   display: -webkit-box;
@@ -284,7 +287,7 @@ a {
 }
 
 #hero .img {
-  height: 580px;
+  height: 480px;
 }
 
 #hero .img img {
@@ -292,12 +295,7 @@ a {
 }
 
 #about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 13em 0 4em;
 }
 
 #about .container {
@@ -331,11 +329,15 @@ a {
 }
 
 #about .right {
-  height: 500px;
+  height: 430px;
 }
 
 #about .right img {
   height: 100%;
+}
+
+#what {
+  padding: 11em 0 15em;
 }
 
 #what .container {
@@ -398,10 +400,17 @@ a {
 #what .circle {
   position: absolute;
   left: 0;
+  z-index: -1;
+  width: 900px;
+  overflow: hidden;
 }
 
 #what .circle svg {
   width: 1500px;
+}
+
+#work {
+  padding: 5em 0 3em;
 }
 
 #work .container {
@@ -566,6 +575,10 @@ a {
   opacity: 1;
 }
 
+#contact {
+  padding: 10em 0 15em;
+}
+
 #contact .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,8 +600,8 @@ a {
 }
 
 #contact .left .img img {
-  width: 500px;
-  height: auto;
+  height: 430px;
+  width: auto;
 }
 
 #contact .left .paragraph {
@@ -633,7 +646,7 @@ a {
   font-family: 'Heebo', sans-serif;
   padding: 0.7em;
   resize: none;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
 }
 
 #contact form input:not([type="submit"]):focus, #contact form textarea:not([type="submit"]):focus {
@@ -651,6 +664,10 @@ a {
   margin-top: 1.5em;
 }
 
+#contact form label:first-child {
+  margin-top: 2.5em;
+}
+
 #contact form .btn {
   width: 230px;
 }
@@ -665,6 +682,7 @@ footer .upper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 0.5em;
 }
 
 footer .lower {
@@ -672,6 +690,7 @@ footer .lower {
   color: #232323;
   font-family: 'Heebo';
   font-size: 16px;
+  margin-bottom: 1.5em;
 }
 
 footer .info {
@@ -700,5 +719,36 @@ footer .info img {
 
 footer .links a:not(:first-child) {
   margin-left: 1.8em;
+}
+
+@media only screen and (max-width: 1650px) {
+  .container {
+    padding: 0 90px 0 70px;
+  }
+  #work .container {
+    padding: 0 50px 0 70px;
+  }
+  #what .circle svg {
+    width: 1370px;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .container {
+    padding: 0 40px 0 40px;
+  }
+  #work .container {
+    padding: 0 0 0 40px;
+  }
+  #what .circle svg {
+    width: 1310px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .push {
+    margin: 0;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

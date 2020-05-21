@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <NavContext.Provider value={{ active, setActive }}>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <main className="push">
           <Hero />
           <About />

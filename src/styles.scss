@@ -28,6 +28,7 @@ body{
 
 .push{
     margin-left: 220px;
+    width: calc(100% - 220px);
 }
 
 
@@ -120,6 +121,7 @@ a{
     border-radius: 30px;
     position: relative;
     text-align: center;
+    cursor:pointer;
 
     &.square {
         min-width: 50px;
@@ -185,8 +187,9 @@ a{
 
 .divider{
     width:100%;
-    height: 1px;
-    background:$color-medium;
+    height: 2px;
+    background:$color-dark;
+    margin: 1.5em 0;
 }
 
 /////////////////////////////////////////////////   SECTIONS
@@ -196,7 +199,7 @@ a{
 
 .sidebar{
     width:220px;
-    height:100%;
+    height:100vh;
     position:fixed;
     background:$color-dark;
     display:flex;
@@ -276,7 +279,7 @@ a{
     }
 
     .img{
-        height:580px;
+        height:480px;
 
         & img{
             height:100%;
@@ -289,8 +292,7 @@ a{
 //////////////////////////// ABOUT
 
 #about{ 
-    display:flex;
-    align-items: center;
+    padding: 13em 0 4em;
     
     .container{
         width:100%;
@@ -317,7 +319,7 @@ a{
     }
     
     .right{
-        height:500px;
+        height:430px;
 
         img{
             height:100%;
@@ -330,6 +332,7 @@ a{
 //////////////////////////// WHAT
 
 #what{
+    padding: 11em 0 15em;
     
     .container{
         position: relative;
@@ -376,9 +379,12 @@ a{
     .circle{
         position: absolute;
         left:0;
+        z-index: -1;
+        width:900px;
+        overflow: hidden;
 
         svg{
-            width:1500px;
+            width:1500px; 
         }
     }
 }
@@ -388,6 +394,7 @@ a{
 //////////////////////////// WORK
 
 #work{
+    padding: 5em 0 3em;
     
     .container{
         padding: 0 140px;
@@ -559,6 +566,7 @@ a{
 //////////////////////////// CONTACT
 
 #contact{
+    padding: 10em 0 15em;
 
     .container{
         display:flex;
@@ -572,8 +580,8 @@ a{
         flex-direction: column;
 
         .img img{
-            width:500px;
-            height:auto;
+            height: 430px;
+            width:auto;
         }
 
         .paragraph{
@@ -611,7 +619,7 @@ a{
                 font-family: 'Heebo', sans-serif;
                 padding:0.7em;
                 resize: none;
-                margin-bottom: 2.5em;
+                margin-bottom: 2em;
 
                 &:focus{
                     outline-color: $color-light;
@@ -627,6 +635,10 @@ a{
         label{
             margin-bottom: 0.2em;
             margin-top: 1.5em;
+
+            &:first-child{
+                margin-top:2.5em;
+            }
         }
 
         .btn{
@@ -645,6 +657,7 @@ footer{
         display:flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: 0.5em;
     }
 
     .lower{
@@ -652,6 +665,7 @@ footer{
         color: $color-medium;
         font-family: 'Heebo';
         font-size: 16px;
+        margin-bottom:1.5em;
     }
 
     .info{
@@ -679,5 +693,48 @@ footer{
         a:not(:first-child){
             margin-left: 1.8em;
         }
+    }
+}
+
+
+
+
+/////////////////////////////////////////////////   RESPONSIVENESS
+
+@media only screen and (max-width: 1650px){
+
+    .container{
+        padding: 0 90px 0 70px;
+    }
+
+    #work .container{
+        padding: 0 50px 0 70px;
+    }
+
+    #what .circle svg {
+        width: 1370px;
+    }
+}
+
+@media only screen and (max-width: 1450px){
+
+    .container{
+        padding: 0 40px 0 40px;
+    }
+
+    #work .container{
+        padding: 0 0 0 40px;
+    }
+
+    #what .circle svg {
+        width: 1310px;
+    }
+}
+
+@media only screen and (max-width: 1350px){
+
+    .push{
+        margin: 0;
+        width: 100%;
     }
 }
