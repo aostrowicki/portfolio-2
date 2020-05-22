@@ -151,6 +151,22 @@ a{
     }
 }
 
+.btn-2{
+    border: 2px solid $color-primary;
+    border-radius: 20px;
+    padding: 0.3em 1.1em;
+    color:white;
+
+    &:hover{
+        background:$color-primary;       
+    }
+
+    &.active{
+        border-color: transparent;
+        background:none;
+    }
+}
+
 .img-circle{
     display:flex;
     align-items: center;
@@ -257,6 +273,133 @@ a{
         &:hover img{
             transform: translateY(5px);
         }       
+    }
+}
+
+//////////////////////////// NAVBAR
+
+
+.navbar{
+    height:80px;
+    width:100%;
+    background:$color-dark;
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 5;
+    transition: all 0.3s ease-in-out;
+
+    &.hidden{
+        margin-top: -80px;
+    }
+    
+    .container{
+        height:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        
+    .logo img{
+        height: 30px;
+    }
+
+    .menu ul{
+        display:flex;
+        align-items: center;
+
+        & li:not(:first-child){
+            margin-left:2em;
+        }
+
+        & li:last-child{
+            margin-left:1.2em;
+        }
+    }
+
+    .hamburger{
+        background:$color-dark;
+        padding:10px 11px;
+        border-radius: 50%;
+        display:none;
+        position:fixed;
+        right:15px;
+        cursor:pointer;
+
+        span{
+            display:block;
+            height: 4px;
+            margin: 6px 2px;
+            background:white;
+            width: 30px;
+            border-radius: 5px;
+            transition: all 0.1s ease-in-out;
+        }
+
+        &.open{
+            span:first-child{
+                width:100%;
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            span:nth-child(2){
+                opacity:0;
+            }
+
+            span:last-child{
+                width:100%;
+                transform: translateY(-10px) rotate(-45deg) ;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:750px){
+    .navbar.hidden{
+        width:108px;
+        background:transparent;
+        margin-top: 0px;
+    }
+
+    .navbar .hamburger{
+        display:block;
+    }
+
+    .menu{
+        position:fixed;
+        height:calc(100vh - 80px);
+        width:100%;
+        z-index:2;
+        top:80px;
+        right:-100%;
+        background: $color-dark;
+        transition: all 0.3s ease-in-out;
+        font-size: 18px;
+        
+        &.open{
+            right: 0;
+        }
+
+        ul{
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            
+            li{
+                margin: 0!important;
+
+                a{
+                    color:white;
+                    padding:1em;
+                    border:none;
+
+                    &:hover{
+                        background:none;
+                        color:$color-primary;
+                    }
+                }
+            }
+        }
     }
 }
 

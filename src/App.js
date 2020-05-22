@@ -7,15 +7,19 @@ import What from './sections/What';
 import Work from './sections/Work';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import Navbar from './sections/Navbar';
+import { useMediaQuery } from 'react-responsive'
 
 function App() {
 
   const [active, setActive] = useState('home');
+  const showNavbar = useMediaQuery({ maxWidth: 1350 })
 
   return (
     <>
       <NavContext.Provider value={{ active, setActive }}>
-        {/* <Sidebar /> */}
+        {!showNavbar && <Sidebar />}
+        {showNavbar && <Navbar />}
         <main className="push">
           <Hero />
           <About />

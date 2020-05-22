@@ -8,7 +8,7 @@ export default function Sidebar() {
     const { active, setActive } = useContext(NavContext);
 
     return (
-        <header className="sidebar">
+        <div className="sidebar">
             <div className="logo">
                 <a href="#">
                     <img src={logo}></img>
@@ -31,6 +31,6 @@ export default function Sidebar() {
                     <div className="paragraph">Scroll down</div>
                 </a>
             </div>
-        </header>
+        </div>
     )
 }
