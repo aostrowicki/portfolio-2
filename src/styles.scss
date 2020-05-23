@@ -578,13 +578,13 @@ a{
 
     .websites-grid{
         display:grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
         grid-column-gap: 20px;
         grid-row-gap: calc(20px + 40px);
         
         .websites-item{
             position: relative;
-            height:330px;
+            padding-bottom: 50%;
             width: calc(100% - 40px);
             cursor:pointer;
 
@@ -854,6 +854,10 @@ footer{
         padding: 0 50px 0 70px;
     }
 
+    #what{
+        padding: 10em 0 12em;
+    }
+
     #what .circle svg {
         width: 1370px;
     }
@@ -879,5 +883,170 @@ footer{
     .push{
         margin: 0;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1150px){
+
+    .header{
+        font-size: 3.5em;
+    }
+
+    #about{
+        padding: 9em 0 0;
+
+        .left{
+            max-width: 450px;
+        }
+    }
+
+    #what{
+
+        padding-bottom: 6em;
+
+        .right{
+            margin-left:100px;
+
+            .feature:nth-child(even){
+                margin-left:50px;
+            }
+        }
+
+        .circle{
+            width:700px;
+
+            svg{
+                width:1120px;
+            }
+        }
+    }
+
+    #work .categories{
+        margin: 30px 0 70px;
+    }
+
+    #contact{
+        padding-top: 6em;
+
+        form label:first-child{
+            margin-top:1.5em;
+        }
+
+        form input, form textarea{
+            &:not([type="submit"]){
+                width:400px;}
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1000px){
+
+    #about .right{
+        height: 360px;
+    }
+
+    #contact .left .img img{
+        height: 330px;
+    }
+
+    #what .right{
+        margin-left:20px;
+    }
+
+    #what .circle{
+        width:600px;
+
+            svg{
+                width:970px;
+            }
+    }
+}
+
+
+@media only screen and (max-width: 920px){
+    #about .container{
+        flex-direction: column;
+        align-items: flex-start;
+
+        .left{
+            max-width: 500px;
+        }
+
+        .right{
+            align-self: flex-end;
+        }
+    }
+
+    #what .container{
+        flex-direction: column;
+        align-items: flex-start;
+
+        .left{
+            margin-bottom: 65px;
+        }
+
+        .right{
+            margin:0;
+
+            .feature:nth-child(even){
+                margin-left:45px;
+            }
+        }
+
+        .circle{
+            width:500px;
+            bottom:-90px;
+
+            svg{
+                width:600px;
+            }
+        }
+    }
+
+    #work{
+
+        .header{
+            text-align: left;
+        }
+
+        .categories{
+            display: inline-block;
+            // width: 100%;
+
+            & .link:not(:first-child)::before{
+                margin:0 20px;
+                width:80px;
+            }
+        }
+    }
+
+    #contact .container{
+        flex-direction: column;
+        position: relative;
+
+        .left img{
+            position: absolute;
+            bottom:0;
+            right:0;
+        }
+    }
+
+    footer .container .upper{
+        flex-direction: column;
+
+        .info{
+            align-self: flex-start;
+            flex-direction: column;
+            align-items:flex-start;
+
+            .info-item{
+                margin-bottom:1.2em;
+            }
+        }
+
+        .links{
+            margin-top:2em;
+        }
     }
 }
