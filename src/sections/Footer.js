@@ -13,7 +13,7 @@ export default function Footer() {
                 </div>
                 <Divider />
                 <div className="lower">
-                    <span>Copyright © 2020 by Adam Ostrowicki. All Rights Reserved.</span>
+                    <span>Copyright © 2020 by Adam Ostrowicki</span>
                 </div>
             </div>
 

@@ -58,7 +58,7 @@ body{
 .subtitle{
     font-family: 'Open Sans', sans-serif;
     font-weight:600;
-    font-size: 18px;
+    font-size: 1.125em;
     color: white;
 
     span{
@@ -117,7 +117,7 @@ a{
     padding: 1em;
     min-width: 220px;
     font-family: 'Heebo', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     border-radius: 30px;
     position: relative;
     text-align: center;
@@ -807,7 +807,7 @@ footer{
         text-align: center;
         color: $color-medium;
         font-family: 'Heebo';
-        font-size: 16px;
+        font-size: 1em;
         margin-bottom:1.5em;
     }
 
@@ -890,6 +890,14 @@ footer{
 
     .header{
         font-size: 3.5em;
+    }
+
+    .container{
+        padding: 0 25px 0 25px;
+    }
+
+    #work .container{
+        padding: 0 25px 0 25px;
     }
 
     #about{
@@ -1006,13 +1014,7 @@ footer{
 
     #work{
 
-        .header{
-            text-align: left;
-        }
-
         .categories{
-            display: inline-block;
-            // width: 100%;
 
             & .link:not(:first-child)::before{
                 margin:0 20px;
@@ -1030,6 +1032,14 @@ footer{
             bottom:0;
             right:0;
         }
+
+        .paragraph{
+            margin-bottom:1.5em;
+        }
+
+        & form input:not([type="submit"]), #contact form textarea:not([type="submit"]) {
+            margin-bottom: 1em;
+        }
     }
 
     footer .container .upper{
@@ -1041,12 +1051,131 @@ footer{
             align-items:flex-start;
 
             .info-item{
-                margin-bottom:1.2em;
+                margin-bottom:1.5em;
             }
         }
 
         .links{
-            margin-top:2em;
+            margin-top:1.5em;
         }
     }
+}
+
+
+@media only screen and (max-width: 800px){
+
+
+
+    #contact{
+        padding-bottom: 400px;
+    }
+
+    #contact form input:not([type="submit"]), #contact form textarea:not([type="submit"]) {
+        width:100%;
+    }
+
+    #contact label{
+        color:white;
+        font-size: 14px;
+    }
+
+    #contact .container .left img{
+        bottom:-52%;
+    }
+
+    footer{
+        padding-top:4em;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    #hero .img {
+        height: unset;
+
+        img {
+            width:100%;
+            height:unset;
+        }
+    }
+
+    #about .left{
+        margin-bottom: 2em;
+    }
+
+    #work .websites-grid{
+        grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
+    }
+
+    #work {
+
+        .header{
+            text-align: left;
+        }
+
+        .categories{
+            text-align: left;
+            display:flex;
+            justify-content: space-between;
+
+            & #work .categories .link:not(:first-child)::before {
+                margin: 0 20px; 
+                width: 80px; 
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    body{
+        font-size: 14px;
+    }
+
+    #hero{
+
+        .header{
+            text-align: left;
+            margin-bottom: 65px;
+            margin-top:15px;
+        }
+
+        .subtitle{
+            font-size: 1em;
+            text-align: left;
+        }
+
+        .subtitle span{
+            display: block;
+        }
+
+        .btn{
+            width: 100%;
+            padding: 1.4em;
+        }
+    }
+
+    #what .container .circle {
+        width: 300px;
+        bottom: -90px;
+    }
+
+    #what {
+        padding: 8em 0 10em;
+    }
+    
+    .header{
+        font-size:36px;
+    }
+
+    .subheader{
+        font-size: 20px;
+    }
+
+    #contact .container .left img{
+        bottom:-60%;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    //images
 }

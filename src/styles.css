@@ -58,7 +58,7 @@ body {
 .subtitle {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125em;
   color: white;
 }
 
@@ -118,7 +118,7 @@ a {
   padding: 1em;
   min-width: 220px;
   font-family: 'Heebo', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   border-radius: 30px;
   position: relative;
   text-align: center;
@@ -840,7 +840,7 @@ footer .lower {
   text-align: center;
   color: #232323;
   font-family: 'Heebo';
-  font-size: 16px;
+  font-size: 1em;
   margin-bottom: 1.5em;
 }
 
@@ -909,6 +909,12 @@ footer .links a:not(:first-child) {
 @media only screen and (max-width: 1150px) {
   .header {
     font-size: 3.5em;
+  }
+  .container {
+    padding: 0 25px 0 25px;
+  }
+  #work .container {
+    padding: 0 25px 0 25px;
   }
   #about {
     padding: 9em 0 0;
@@ -1005,12 +1011,6 @@ footer .links a:not(:first-child) {
   #what .container .circle svg {
     width: 600px;
   }
-  #work .header {
-    text-align: left;
-  }
-  #work .categories {
-    display: inline-block;
-  }
   #work .categories .link:not(:first-child)::before {
     margin: 0 20px;
     width: 80px;
@@ -1026,6 +1026,12 @@ footer .links a:not(:first-child) {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  #contact .container .paragraph {
+    margin-bottom: 1.5em;
+  }
+  #contact .container form input:not([type="submit"]), #contact .container #contact form textarea:not([type="submit"]) {
+    margin-bottom: 1em;
   }
   footer .container .upper {
     -webkit-box-orient: vertical;
@@ -1045,10 +1051,100 @@ footer .links a:not(:first-child) {
             align-items: flex-start;
   }
   footer .container .upper .info .info-item {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.5em;
   }
   footer .container .upper .links {
-    margin-top: 2em;
+    margin-top: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #contact {
+    padding-bottom: 400px;
+  }
+  #contact form input:not([type="submit"]), #contact form textarea:not([type="submit"]) {
+    width: 100%;
+  }
+  #contact label {
+    color: white;
+    font-size: 14px;
+  }
+  #contact .container .left img {
+    bottom: -52%;
+  }
+  footer {
+    padding-top: 4em;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  #hero .img {
+    height: unset;
+  }
+  #hero .img img {
+    width: 100%;
+    height: unset;
+  }
+  #about .left {
+    margin-bottom: 2em;
+  }
+  #work .websites-grid {
+    -ms-grid-columns: (minmax(330px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+  #work .header {
+    text-align: left;
+  }
+  #work .categories {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #work .categories #work .categories .link:not(:first-child)::before {
+    margin: 0 20px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+  #hero .header {
+    text-align: left;
+    margin-bottom: 65px;
+    margin-top: 15px;
+  }
+  #hero .subtitle {
+    font-size: 1em;
+    text-align: left;
+  }
+  #hero .subtitle span {
+    display: block;
+  }
+  #hero .btn {
+    width: 100%;
+    padding: 1.4em;
+  }
+  #what .container .circle {
+    width: 300px;
+    bottom: -90px;
+  }
+  #what {
+    padding: 8em 0 10em;
+  }
+  .header {
+    font-size: 36px;
+  }
+  .subheader {
+    font-size: 20px;
+  }
+  #contact .container .left img {
+    bottom: -60%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
