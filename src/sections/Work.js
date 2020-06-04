@@ -14,7 +14,8 @@ export default function Work() {
                 <h1 className="header">My work</h1>
                 <div className="categories">
                     {categories.map(item => {
-                        return <span key={item} className={`link ${active === item ? 'active' : ''}`} onClick={() => setActive(item)}>{item}</span>
+                        return <><span key={item} className={`link ${active === item ? 'active' : ''}`} onClick={() => setActive(item)}>{item}</span>
+                            <span className="loader"></span></>
                     })}
                 </div>
 

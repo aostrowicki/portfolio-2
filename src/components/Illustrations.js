@@ -7,7 +7,6 @@ export default function Illustrations() {
             <Illustration title="test" />
             <Illustration title="test" />
             <Illustration title="test" />
-            <Illustration title="test" />
         </div>
     )
 }

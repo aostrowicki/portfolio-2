@@ -216,6 +216,36 @@ a {
   margin: 1.5em 0;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #FF1E56;
+}
+
 .sidebar {
   width: 220px;
   height: 100vh;
@@ -564,74 +594,59 @@ a {
   padding: 5em 0 3em;
 }
 
-#work .container {
-  padding: 0 140px;
-}
-
 #work .header {
   text-align: center;
 }
 
 #work .categories {
-  text-align: center;
   margin: 60px 0 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #work .categories .link {
   cursor: pointer;
 }
 
-#work .categories .link:not(:first-child)::before {
+#work .categories .loader:not(:last-child) {
   margin: 0 45px;
   display: inline-block;
-  content: '';
   height: 2px;
   width: 100px;
   background-color: #232323;
-  vertical-align: middle;
+}
+
+#work .categories .loader:last-child {
+  display: none;
 }
 
 #work .websites-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-column-gap: 20px;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-column-gap: 60px;
   grid-row-gap: calc(20px + 40px);
 }
 
 #work .websites-grid .websites-item {
   position: relative;
-  padding-bottom: 50%;
-  width: calc(100% - 40px);
+  padding-top: 50%;
+  width: 100%;
   cursor: pointer;
+  overflow: hidden;
+  background-size: cover;
 }
 
-#work .websites-grid .websites-item .btn {
-  opacity: 0;
+#work .websites-grid .websites-item .text-wrapper {
   position: absolute;
-  right: -40px;
-  top: calc(50% - 50px);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-#work .websites-grid .websites-item .title {
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-#work .websites-grid .websites-item .description {
-  width: 80%;
-  opacity: 0;
-  position: absolute;
-  bottom: -1em;
-  left: 30px;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 }
 
 #work .websites-grid .websites-item::before {
@@ -657,19 +672,6 @@ a {
   transition: all 0.1s ease-in-out;
 }
 
-#work .websites-grid .websites-item:hover .btn {
-  opacity: 1;
-}
-
-#work .websites-grid .websites-item:hover .title {
-  bottom: 4em;
-}
-
-#work .websites-grid .websites-item:hover .description {
-  opacity: 1;
-  bottom: 10px;
-}
-
 #work .websites-grid .websites-item:hover::before {
   height: 100px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
@@ -681,16 +683,15 @@ a {
 #work .illustrations-grid, #work .icons-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: calc(20px + 40px);
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 40px;
 }
 
 #work .illustrations-grid .illustrations-item, #work .illustrations-grid .icons-item, #work .icons-grid .illustrations-item, #work .icons-grid .icons-item {
   position: relative;
-  height: 330px;
-  width: calc(100% - 40px);
+  padding-top: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -876,9 +877,6 @@ footer .links a:not(:first-child) {
   .container {
     padding: 0 90px 0 70px;
   }
-  #work .container {
-    padding: 0 50px 0 70px;
-  }
   #what {
     padding: 10em 0 12em;
   }
@@ -890,9 +888,6 @@ footer .links a:not(:first-child) {
 @media only screen and (max-width: 1450px) {
   .container {
     padding: 0 40px 0 40px;
-  }
-  #work .container {
-    padding: 0 0 0 40px;
   }
   #what .circle svg {
     width: 1310px;
@@ -913,8 +908,8 @@ footer .links a:not(:first-child) {
   .container {
     padding: 0 25px 0 25px;
   }
-  #work .container {
-    padding: 0 25px 0 25px;
+  #work .illustrations-grid, #work .icons-grid, #work .websites-grid {
+    grid-gap: 25px;
   }
   #about {
     padding: 9em 0 0;
@@ -1011,10 +1006,6 @@ footer .links a:not(:first-child) {
   #what .container .circle svg {
     width: 600px;
   }
-  #work .categories .link:not(:first-child)::before {
-    margin: 0 20px;
-    width: 80px;
-  }
   #contact .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1096,17 +1087,13 @@ footer .links a:not(:first-child) {
     text-align: left;
   }
   #work .categories {
-    text-align: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
-  #work .categories #work .categories .link:not(:first-child)::before {
-    margin: 0 20px;
-    width: 80px;
+  #work .categories .loader:not(:last-child) {
+    margin: 0 25px;
   }
 }
 
