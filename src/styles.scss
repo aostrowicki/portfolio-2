@@ -1144,10 +1144,10 @@ footer{
 
         .btn{
             width: 100%;
-            padding: 1.4em;
         }
     }
 
+    
     #what {
         padding: 8em 0 10em;
 
@@ -1162,9 +1162,11 @@ footer{
                 bottom:-40px;
                 left:-15px;
             }
-        }
+        } 
+    }
 
-        
+    #what .feature .img-circle {
+        margin-right: 30px;
     }
     
     .header{

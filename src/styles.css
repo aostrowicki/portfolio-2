@@ -1178,7 +1178,6 @@ footer .links a:not(:first-child) {
   }
   #hero .btn {
     width: 100%;
-    padding: 1.4em;
   }
   #what {
     padding: 8em 0 10em;
@@ -1192,6 +1191,9 @@ footer .links a:not(:first-child) {
   #what .container .circle {
     bottom: -40px;
     left: -15px;
+  }
+  #what .feature .img-circle {
+    margin-right: 30px;
   }
   .header {
     font-size: 36px;
