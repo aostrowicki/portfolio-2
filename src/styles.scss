@@ -35,7 +35,7 @@ body{
 .header{
     font-family: 'Open Sans', sans-serif;
     font-weight:700;
-    font-size: 4em;
+    font-size: 3.5em;
     color: white;
 }
 
@@ -123,30 +123,47 @@ a{
     text-align: center;
     cursor:pointer;
 
-    &.square {
-        min-width: 50px;
-        min-height: 50px;
-
-        img{
-            vertical-align: bottom;
-        }
-    }
-
-    &:not(.square) img{
+    img{
         vertical-align: middle;
         transform:translateX(1em);
         transition: all 0.15s ease-in-out;
     }
 
     &.right:hover{
+
         img{
-            transform:translateX(1.4em);
+            animation: right 1.2s ease-in-out infinite;
+        }
+
+        @keyframes right{
+            0%{
+                transform:translateX(1em);
+            }
+            15%{
+                transform:translateX(1.5em);
+            }
+            30%{
+                transform:translateX(1em);
+            }
         }
     }
 
     &.down:hover{
+
         img{
-            transform:translate(1em,0.3em);  
+            animation: down 1.2s ease-in-out infinite; 
+        }
+
+        @keyframes down{
+            0%{
+                transform:translate(1em,0em);  
+            }
+            15%{
+                transform:translate(1em,0.3em);  
+            }
+            30%{
+                transform:translate(1em,0em);  
+            }
         }
     }
 }
@@ -508,6 +525,10 @@ a{
         height: 600px;
     }
 
+    .header{
+        margin-right: 0.8em;
+    }
+
     .right{
         margin-left: 160px;
         display:flex;
@@ -783,7 +804,7 @@ footer{
         display:flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 0.5em;
+        padding-bottom: 1em;
     }
 
     .lower{
@@ -791,7 +812,7 @@ footer{
         color: $color-medium;
         font-family: 'Heebo';
         font-size: 1em;
-        margin-bottom:1.5em;
+        margin: 2.5em 0 2.5em 0;
     }
 
     .info{
@@ -884,11 +905,10 @@ footer{
     }
 
     #what{
-
         padding-bottom: 6em;
 
         .right{
-            margin-left:100px;
+            margin-left:50px;
 
             .feature:nth-child(even){
                 margin-left:50px;
@@ -899,7 +919,7 @@ footer{
             width:700px;
 
             svg{
-                width:1120px;
+                width:1080px;
             }
         }
     }
@@ -933,6 +953,10 @@ footer{
         height: 330px;
     }
 
+    #what .header{
+        margin:0;
+    }
+
     #what .right{
         margin-left:20px;
     }
@@ -941,7 +965,7 @@ footer{
         width:600px;
 
             svg{
-                width:970px;
+                width:930px;
             }
     }
 }
@@ -961,9 +985,15 @@ footer{
         }
     }
 
+    #what{
+        overflow-x: hidden;
+    }
+
     #what .container{
         flex-direction: column;
         align-items: flex-start;
+        height:640px;
+        
 
         .left{
             margin-bottom: 65px;
@@ -978,11 +1008,11 @@ footer{
         }
 
         .circle{
-            width:500px;
-            bottom:-90px;
+            bottom:0;
+            overflow: visible;
 
             svg{
-                width:600px;
+                overflow: visible;
             }
         }
     }
@@ -1047,7 +1077,7 @@ footer{
     }
 
     footer{
-        padding-top:4em;
+        padding-top:6em;
     }
 }
 
@@ -1105,6 +1135,7 @@ footer{
         .subtitle{
             font-size: 1em;
             text-align: left;
+            padding-top:16vh;
         }
 
         .subtitle span{
@@ -1117,13 +1148,23 @@ footer{
         }
     }
 
-    #what .container .circle {
-        width: 300px;
-        bottom: -90px;
-    }
-
     #what {
         padding: 8em 0 10em;
+
+        .container{
+            height:540px;
+
+            .right .feature:nth-child(even) {
+                margin-left: 25px;
+            }
+
+            .circle{
+                bottom:-40px;
+                left:-15px;
+            }
+        }
+
+        
     }
     
     .header{

@@ -26,7 +26,14 @@ export default function Sidebar() {
             </div>
 
             <div className="scroll">
-                <a href="#about">
+                <a href={
+                    (active === 'home' ? '#about' :
+                        (active === 'about' ? '#what' :
+                            (active === 'what' ? '#work' :
+                                (active === 'work' ? '#contact' :
+                                    (active === 'contact' ? '#footer' : ''
+                                    )))))
+                }>
                     <img src={scroll} />
                     <div className="paragraph">Scroll down</div>
                 </a>

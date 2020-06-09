@@ -35,7 +35,7 @@ body {
 .header {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 4em;
+  font-size: 3.5em;
   color: white;
 }
 
@@ -125,16 +125,7 @@ a {
   cursor: pointer;
 }
 
-.btn.square {
-  min-width: 50px;
-  min-height: 50px;
-}
-
-.btn.square img {
-  vertical-align: bottom;
-}
-
-.btn:not(.square) img {
+.btn img {
   vertical-align: middle;
   -webkit-transform: translateX(1em);
           transform: translateX(1em);
@@ -143,13 +134,73 @@ a {
 }
 
 .btn.right:hover img {
-  -webkit-transform: translateX(1.4em);
-          transform: translateX(1.4em);
+  -webkit-animation: right 1.2s ease-in-out infinite;
+          animation: right 1.2s ease-in-out infinite;
+}
+
+@-webkit-keyframes right {
+  0% {
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
+  }
+  15% {
+    -webkit-transform: translateX(1.5em);
+            transform: translateX(1.5em);
+  }
+  30% {
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
+  }
+}
+
+@keyframes right {
+  0% {
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
+  }
+  15% {
+    -webkit-transform: translateX(1.5em);
+            transform: translateX(1.5em);
+  }
+  30% {
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
+  }
 }
 
 .btn.down:hover img {
-  -webkit-transform: translate(1em, 0.3em);
-          transform: translate(1em, 0.3em);
+  -webkit-animation: down 1.2s ease-in-out infinite;
+          animation: down 1.2s ease-in-out infinite;
+}
+
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translate(1em, 0em);
+            transform: translate(1em, 0em);
+  }
+  15% {
+    -webkit-transform: translate(1em, 0.3em);
+            transform: translate(1em, 0.3em);
+  }
+  30% {
+    -webkit-transform: translate(1em, 0em);
+            transform: translate(1em, 0em);
+  }
+}
+
+@keyframes down {
+  0% {
+    -webkit-transform: translate(1em, 0em);
+            transform: translate(1em, 0em);
+  }
+  15% {
+    -webkit-transform: translate(1em, 0.3em);
+            transform: translate(1em, 0.3em);
+  }
+  30% {
+    -webkit-transform: translate(1em, 0em);
+            transform: translate(1em, 0em);
+  }
 }
 
 .btn-2 {
@@ -532,6 +583,10 @@ a {
   height: 600px;
 }
 
+#what .header {
+  margin-right: 0.8em;
+}
+
 #what .right {
   margin-left: 160px;
   display: -webkit-box;
@@ -834,7 +889,7 @@ footer .upper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
 
 footer .lower {
@@ -842,7 +897,7 @@ footer .lower {
   color: #232323;
   font-family: 'Heebo';
   font-size: 1em;
-  margin-bottom: 1.5em;
+  margin: 2.5em 0 2.5em 0;
 }
 
 footer .info {
@@ -921,7 +976,7 @@ footer .links a:not(:first-child) {
     padding-bottom: 6em;
   }
   #what .right {
-    margin-left: 100px;
+    margin-left: 50px;
   }
   #what .right .feature:nth-child(even) {
     margin-left: 50px;
@@ -930,7 +985,7 @@ footer .links a:not(:first-child) {
     width: 700px;
   }
   #what .circle svg {
-    width: 1120px;
+    width: 1080px;
   }
   #work .categories {
     margin: 30px 0 70px;
@@ -953,6 +1008,9 @@ footer .links a:not(:first-child) {
   #contact .left .img img {
     height: 330px;
   }
+  #what .header {
+    margin: 0;
+  }
   #what .right {
     margin-left: 20px;
   }
@@ -960,7 +1018,7 @@ footer .links a:not(:first-child) {
     width: 600px;
   }
   #what .circle svg {
-    width: 970px;
+    width: 930px;
   }
 }
 
@@ -981,6 +1039,9 @@ footer .links a:not(:first-child) {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
+  #what {
+    overflow-x: hidden;
+  }
   #what .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -989,6 +1050,7 @@ footer .links a:not(:first-child) {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    height: 640px;
   }
   #what .container .left {
     margin-bottom: 65px;
@@ -1000,11 +1062,11 @@ footer .links a:not(:first-child) {
     margin-left: 45px;
   }
   #what .container .circle {
-    width: 500px;
-    bottom: -90px;
+    bottom: 0;
+    overflow: visible;
   }
   #what .container .circle svg {
-    width: 600px;
+    overflow: visible;
   }
   #contact .container {
     -webkit-box-orient: vertical;
@@ -1064,7 +1126,7 @@ footer .links a:not(:first-child) {
     bottom: -52%;
   }
   footer {
-    padding-top: 4em;
+    padding-top: 6em;
   }
 }
 
@@ -1109,6 +1171,7 @@ footer .links a:not(:first-child) {
   #hero .subtitle {
     font-size: 1em;
     text-align: left;
+    padding-top: 16vh;
   }
   #hero .subtitle span {
     display: block;
@@ -1117,12 +1180,18 @@ footer .links a:not(:first-child) {
     width: 100%;
     padding: 1.4em;
   }
-  #what .container .circle {
-    width: 300px;
-    bottom: -90px;
-  }
   #what {
     padding: 8em 0 10em;
+  }
+  #what .container {
+    height: 540px;
+  }
+  #what .container .right .feature:nth-child(even) {
+    margin-left: 25px;
+  }
+  #what .container .circle {
+    bottom: -40px;
+    left: -15px;
   }
   .header {
     font-size: 36px;

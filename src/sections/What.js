@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Feature from '../components/Feature'
 import illustration from '../assets/illustration.svg'
 import des from '../assets/des.svg'
 import dev from '../assets/dev.svg'
+import { useMediaQuery } from 'react-responsive'
+import { NavContext } from '../context'
+import { useInView } from 'react-intersection-observer'
 
 export default function What() {
+
+    const smallCircle = useMediaQuery({ maxWidth: 920 })
+
+    const { active, setActive } = useContext(NavContext);
+
+    const [ref, inView, entry] = useInView({
+        threshold: 0.5,
+    });
+
+    useEffect(() => {
+        inView ? setActive('what') : '';
+    }, [inView]);
+
     return (
-        <section id="what">
+        <section id="what" ref={ref}>
             <div className="container">
                 <div className="circle">
-                    <svg viewBox="0 0 1500 1500" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="0" cy="750" r="750" fill="none" stroke="#232323" strokeWidth="2px" />
+                    <svg viewBox="0 0 1500 1500">
+                        {!smallCircle && <circle cx="0" cy="750" r="750" fill="none" stroke="#232323" strokeWidth="2px" />}
+                        {smallCircle && <circle cx="-555" cy="1100" r="750" fill="none" stroke="#232323" strokeWidth="3.5px"></circle>}
                     </svg>
                 </div>
 

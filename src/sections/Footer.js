@@ -5,7 +5,7 @@ import Divider from '../components/Divider'
 
 export default function Footer() {
     return (
-        <footer className="push">
+        <footer className="push" id="footer">
             <div className="container">
                 <div className="upper">
                     <Info />
