@@ -8,6 +8,7 @@ export default function Icons() {
             <Icon title="test"  img={dd}/>
             <Icon title="test"  img={dd}/>
             <Icon title="test"  img={dd}/>
+            <Icon title="test"  img={dd}/>
         </div>
     )
 }

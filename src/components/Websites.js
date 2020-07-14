@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Website from './Website'
 import dd from '../assets/websites/devdes.png'
+import dd1 from '../assets/websites/devdes1.png'
 import Swiper from 'swiper'
 import { useMediaQuery } from 'react-responsive'
 
@@ -28,16 +29,15 @@ export default function Websites() {
         <>
             {!showSwiper &&
                 <div className="websites-grid">
-                    <Website img={dd} title="Trick or Treat" description="Contrary to ntrary ntrary ntrarypopular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old." />
-                    <Website img={dd} title="test" description="test" />
+                    <Website href="https://google.com" img={dd} title="Trick or Treat" work={["dupa", "dupa"]} tools={["dupa", "dupa", "dupa"]} />
+                    <Website href="https://google.com" img={dd} title="Trick or Treat" work={["dupa"]} tools={["dupa"]} />
                 </div>
             }
             {showSwiper &&
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide"><img src={dd} alt="" /></div>
-                        <div className="swiper-slide"><img src={dd} alt="" /></div>
-                        <div className="swiper-slide"><img src={dd} alt="" /></div>
+                        <Website href="https://google.com" img={dd} title="Trick or Treat" work={["dupa", "dupa"]} tools={["dupa", "dupa", "dupa"]} />
+                        <Website href="https://google.com" img={dd1} title="Trick or Treatb" work={["dupa"]} tools={["dupa"]} />
                     </div>
                     <div className="swiper-button-next"></div>
                     <div className="swiper-button-prev"></div>
