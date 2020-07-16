@@ -42,7 +42,7 @@ export default function What() {
         const tl = gsap.timeline();
 
         active === 'what' ?
-            tl.to(circleRef.current, { duration: 2, clipPath: "inset(0% 0 0% 0)", ease: 'power1.easeOut' })
+            tl.to(circleRef.current, { duration: 2, clipPath: "inset(0% 0 -10% 0)", ease: 'power1.easeOut' })
                 .to(images, { duration: 0.15, clipPath: "inset(0% 0 0% 0)", ease: 'power0.easeOut', stagger: 0.25 }, '-=1.7') :
             tl.to(circleRef.current, { duration: 1.5, clipPath: "inset(0% 0 100% 0)", ease: 'power1.easeIn' })
                 .to(images, { duration: 0.1, clipPath: "inset(0% 0 100% 0)", ease: 'power0.easeIn', stagger: { each: 0.2, from: 'end' } }, '-=1.25');

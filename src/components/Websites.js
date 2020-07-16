@@ -7,33 +7,33 @@ import { useMediaQuery } from 'react-responsive'
 
 export default function Websites() {
 
-    const showSwiper = useMediaQuery({ maxWidth: 900 })
+    // const showSwiper = useMediaQuery({ maxWidth: 900 })
 
-    useEffect(() => {
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    }, [showSwiper]);
+    // useEffect(() => {
+    //     var swiper = new Swiper('.swiper-container', {
+    //         slidesPerView: 1,
+    //         spaceBetween: 30,
+    //         loop: true,
+    //         pagination: {
+    //             el: '.swiper-pagination',
+    //             clickable: true,
+    //         },
+    //         navigation: {
+    //             nextEl: '.swiper-button-next',
+    //             prevEl: '.swiper-button-prev',
+    //         },
+    //     });
+    // }, [showSwiper]);
 
     return (
         <>
-            {!showSwiper &&
+            {/* {!showSwiper && */}
                 <div className="websites-grid">
                     <Website href="https://google.com" img={dd} title="Trick or Treat" work={["dupa", "dupa"]} tools={["dupa", "dupa", "dupa"]} />
                     <Website href="https://google.com" img={dd} title="Trick or Treat" work={["dupa"]} tools={["dupa"]} />
                 </div>
-            }
-            {showSwiper &&
+            {/* } */}
+            {/* {showSwiper &&
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <Website href="https://google.com" img={dd} title="Trick or Treat" work={["dupa", "dupa"]} tools={["dupa", "dupa", "dupa"]} />
@@ -42,7 +42,7 @@ export default function Websites() {
                     <div className="swiper-button-next"></div>
                     <div className="swiper-button-prev"></div>
                 </div>
-            })
+            }) */}
         </>
     )
 }

@@ -460,7 +460,7 @@ a {
 
 @media only screen and (max-width: 750px) {
   .navbar.hidden {
-    width: 108px;
+    width: 93px;
     background: transparent;
     margin-top: 0px;
   }
@@ -474,13 +474,14 @@ a {
     z-index: 2;
     top: 80px;
     right: -100%;
-    background: #0D0D0D;
+    background: black;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     font-size: 18px;
   }
   .menu.open {
     right: 0;
+    background: #0D0D0D;
   }
   .menu ul {
     height: 100%;
@@ -662,24 +663,26 @@ a {
 
 .img-popup .close-btn {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 }
 
 .popup-bg {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 998;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 
 .popup {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
@@ -698,8 +701,8 @@ a {
 
 .popup .close-btn {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 }
 
@@ -857,8 +860,8 @@ a {
 #work .illustrations-grid, #work .icons-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(285px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   grid-gap: 40px;
 }
 
@@ -1044,6 +1047,14 @@ footer .links a:not(:first-child) {
   #what .circle svg {
     width: 1310px;
   }
+  .popup .popup-container {
+    width: 100%;
+    margin: 0 40px;
+  }
+  .img-popup img {
+    max-width: 99vw;
+    padding: 0 40px;
+  }
 }
 
 @media only screen and (max-width: 1350px) {
@@ -1058,7 +1069,13 @@ footer .links a:not(:first-child) {
     font-size: 3.5em;
   }
   .container {
-    padding: 0 25px 0 25px;
+    padding: 0 25px;
+  }
+  .popup .popup-container {
+    margin: 0 25px;
+  }
+  .img-popup img {
+    padding: 0 25px;
   }
   #work .illustrations-grid, #work .icons-grid, #work .websites-grid {
     grid-gap: 25px;
@@ -1135,6 +1152,32 @@ footer .links a:not(:first-child) {
   #about .container .right {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .popup .popup-img {
+    padding-top: 60%;
+  }
+  .popup .subheader {
+    padding-bottom: 2rem;
+    margin: 0;
+  }
+  .popup .title {
+    font-size: 20px;
+  }
+  .popup ul:not(:last-of-type) {
+    margin-bottom: 1.2rem;
+  }
+  .popup .btn-container {
+    padding-top: 3em;
+  }
+  .popup .popup-text {
+    width: 100%;
+    padding: 2em;
+  }
+  .popup .popup-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #what {
     overflow-x: hidden;
@@ -1259,6 +1302,12 @@ footer .links a:not(:first-child) {
 @media only screen and (max-width: 500px) {
   body {
     font-size: 14px;
+  }
+  .popup .popup-container {
+    margin: 0 15px;
+  }
+  .img-popup img {
+    padding: 0 15px;
   }
   #hero .header {
     text-align: left;

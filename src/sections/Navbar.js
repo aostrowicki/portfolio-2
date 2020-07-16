@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import logo from '../assets/logo.svg'
 import { NavContext } from '../context'
 
@@ -7,6 +7,14 @@ export default function Navbar() {
     const { active, setActive } = useContext(NavContext);
     const [open, setOpen] = useState(false);
     const [hidden, setHidden] = useState(false);
+
+    useEffect(() => {
+        let previousY = window.pageYOffset;
+        window.onscroll = () => {
+            if (window.pageYOffset > previousY && !open) setHidden(true); else setHidden(false);
+            previousY = window.pageYOffset;
+        }
+    }, [open]);
 
     return (
         <nav className={(hidden) ? 'navbar hidden' : 'navbar'}>
@@ -27,7 +35,7 @@ export default function Navbar() {
                     </ul>
                 </div>
 
-                <div className={(open) ? 'hamburger open' : 'hamburger'} onClick={() => { setOpen(!open); setHidden(false) }}>
+                <div className={(open) ? 'hamburger open' : 'hamburger'} onClick={() => { setOpen(!open); setHidden(open ? true : false) }}>
                     <span></span>
                     <span></span>
                     <span></span>

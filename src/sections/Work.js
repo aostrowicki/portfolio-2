@@ -25,10 +25,10 @@ export default function Work() {
             <div className="container">
                 <h1 className="header">My work</h1>
                 <div className="categories">
-                    {categories.map(item => {
-                        return <><span key={item} className={`link ${active1 === item ? 'active' : ''}`} onClick={() => setActive1(item)}>{item}</span>
-                            <span className="loader"></span></>
-                    })}
+                    {categories.map(item => (
+                        <React.Fragment key={item}><span className={`link ${active1 === item ? 'active' : ''}`} onClick={() => setActive1(item)} key={item}>{item}</span>
+                            <span className="loader"></span></React.Fragment >
+                    ))}
                 </div>
 
                 {active1 === 'Websites' && <Websites />}
