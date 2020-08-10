@@ -10,15 +10,7 @@ export default function Website({ title, img, href, githref, tools, work }) {
 
     return (
         <>
-            {/* {!swiper && */}
-                <div onClick={() => setShowPopup(true)} className="websites-item" style={{ backgroundImage: `url(${img})` }} />
-            {/* } */}
-
-            {/* {swiper &&
-                <div className="swiper-slide" >
-                    <img src={img} />
-                </div>
-            } */}
+            <div onClick={() => setShowPopup(true)} className="websites-item" style={{ backgroundImage: `url(${img})` }} />
 
             {showPopup &&
                 <><div className="popup">

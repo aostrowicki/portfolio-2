@@ -11,7 +11,7 @@ export default function Info() {
             </div>
             <div className="info-item">
                 <img src={contact} alt=""/>
-                <p className="paragraph">adamostrowicki11@gmail.com</p>
+                <p className="paragraph">a.ostrowicki10@gmail.com</p>
             </div>
         </div>
     )

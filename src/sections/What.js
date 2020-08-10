@@ -24,29 +24,29 @@ export default function What() {
         inView ? setActive('what') : '';
     }, [inView]);
 
-    useEffect(() => {
-        gsap.set(circleRef.current, { clipPath: "inset(0 0 100% 0)" });
+    // useEffect(() => {
+    //     gsap.set(circleRef.current, { clipPath: "inset(0 0 100% 0)" });
 
-        images = [...listRef.current.children].map(element => {
-            return element.children[0];
-        });
+    //     images = [...listRef.current.children].map(element => {
+    //         return element.children[0];
+    //     });
 
-        gsap.set(images, { clipPath: "inset(0 0 100% 0)" });
-    }, []);
+    //     gsap.set(images, { clipPath: "inset(0 0 100% 0)" });
+    // }, []);
 
-    useEffect(() => {
-        images = [...listRef.current.children].map(element => {
-            return element.children[0];
-        });
+    // useEffect(() => {
+    //     images = [...listRef.current.children].map(element => {
+    //         return element.children[0];
+    //     });
 
-        const tl = gsap.timeline();
+    //     const tl = gsap.timeline();
 
-        active === 'what' ?
-            tl.to(circleRef.current, { duration: 2, clipPath: "inset(0% 0 -10% 0)", ease: 'power1.easeOut' })
-                .to(images, { duration: 0.15, clipPath: "inset(0% 0 0% 0)", ease: 'power0.easeOut', stagger: 0.25 }, '-=1.7') :
-            tl.to(circleRef.current, { duration: 1.5, clipPath: "inset(0% 0 100% 0)", ease: 'power1.easeIn' })
-                .to(images, { duration: 0.1, clipPath: "inset(0% 0 100% 0)", ease: 'power0.easeIn', stagger: { each: 0.2, from: 'end' } }, '-=1.25');
-    }, [active]);
+    //     active === 'what' ?
+    //         tl.to(circleRef.current, { duration: 2, clipPath: "inset(0% 0 -10% 0)", ease: 'power1.easeOut' })
+    //             .to(images, { duration: 0.15, clipPath: "inset(0% 0 0% 0)", ease: 'power0.easeOut', stagger: 0.25 }, '-=1.7') :
+    //         tl.to(circleRef.current, { duration: 1.5, clipPath: "inset(0% 0 100% 0)", ease: 'power1.easeIn' })
+    //             .to(images, { duration: 0.1, clipPath: "inset(0% 0 100% 0)", ease: 'power0.easeIn', stagger: { each: 0.2, from: 'end' } }, '-=1.25');
+    // }, [active]);
 
     return (
         <section id="what" ref={ref}>
@@ -65,7 +65,7 @@ export default function What() {
                 <div className="right" ref={listRef}>
                     <Feature img={des} title="Web Design" list={['Website Design', 'Landing Pages', 'Wireframing', 'Prototyping']} />
                     <Feature img={dev} title="Web Development" list={['HTML/CSS', 'JavaScript', 'Animations', 'React.js']} />
-                    <Feature img={illustration} title="Illustrations" list={['Icons', 'Logos', 'Illustrations']} />
+                    <Feature img={illustration} title="Graphic Design" list={['Icons', 'Illustrations', 'Logos']} />
                 </div>
             </div>
         </section >

@@ -61,7 +61,7 @@ body{
     font-size: 1.125em;
     color: white;
 
-    span{
+    .color{
         color:$color-primary;
     }
 }
@@ -123,7 +123,7 @@ a{
     text-align: center;
     cursor:pointer;
 
-    img{
+    img,svg{
         vertical-align: middle;
         transform:translateX(1em);
         transition: all 0.15s ease-in-out;
@@ -150,19 +150,19 @@ a{
 
     &.down:hover{
 
-        img{
-            animation: down 1.2s ease-in-out infinite; 
+        svg #arrow{
+            animation: down 1.35s ease-in-out infinite; 
         }
 
         @keyframes down{
             0%{
-                transform:translate(1em,0em);  
+                transform:translateY(0em);  
             }
             15%{
-                transform:translate(1em,0.3em);  
+                transform:translateY(0.2em);  
             }
             30%{
-                transform:translate(1em,0em);  
+                transform:translateY(0em);  
             }
         }
     }
@@ -203,7 +203,7 @@ a{
 }
 
 .icon-btn{
-    padding:0.6em;
+    padding:0.8em;
     background:$color-medium;
     border-radius:50%;
     transition: background-color 0.1s ease-in-out;
@@ -213,7 +213,7 @@ a{
     }
 
     img{
-        height:28px;
+        height:25px;
         vertical-align: bottom;
     }
 }
@@ -312,9 +312,21 @@ a{
             transition: all 0.15s ease-in-out;
         }
 
+        @keyframes scrolldown{
+            0%{
+                transform:translateY(0em);  
+            }
+            15%{
+                transform:translateY(0.3em);  
+            }
+            30%{
+                transform:translateY(0em);  
+            }
+        }
+
         &:hover img{
-            transform: translateY(5px);
-        }       
+            animation: scrolldown 1s ease-in-out infinite;
+        }
     }
 }
 
@@ -361,11 +373,11 @@ a{
 
     .hamburger{
         background:$color-dark;
-        padding:10px 11px;
+        padding: 15px 16px;
         border-radius: 50%;
         display:none;
         position:fixed;
-        right:15px;
+        right:8px;
         cursor:pointer;
 
         span{
@@ -446,6 +458,14 @@ a{
     }
 }
 
+
+@media only screen and (max-width:750px){
+    .navbar.hidden{
+        width:86px;
+        background:transparent;
+        margin-top: 0px;
+    }
+}
 
 //////////////////////////// HERO
 
@@ -591,11 +611,11 @@ a{
     transform: translate(-50%,-50%);
     z-index:999;
 
-    img {
+    img{
         max-width:90vw;
         max-height:90vh;
     }
-
+    
     .close-btn{
         position: absolute;
         top:20px;
@@ -611,8 +631,9 @@ a{
     z-index:998;
     top:0;
     left:0;
-    background:rgba($color: #000000, $alpha: 0.5);
+    background:rgba($color: #000000, $alpha: 0.6);
     backdrop-filter: blur(6px);
+    cursor: pointer;
 }
 
 .popup{
@@ -654,8 +675,8 @@ a{
         margin-left:2em;
 
         img{
-            height:32px;
-            width:32px;
+            height:22px;
+            width:22px;
             transform:none;
             vertical-align: unset;
         }
@@ -674,15 +695,14 @@ a{
     li{
         line-height: 1.4;
         font-family: 'Heebo',sans-serif;
-        opacity:25%;
+        color:rgb(95, 95, 95);
         
 
         &::before{
             margin-right: 1.3em;
             display:inline-block;
             content:'';
-            background-color: white;
-            opacity:30%;
+            background-color: rgb(36, 36, 36);
             width: 9px;
             height:9px;
             border-radius: 50%;
@@ -719,7 +739,7 @@ a{
     }
 
     .categories{
-        margin: 60px 0 140px;
+        margin: 40px 0 100px;
         display:flex;
         justify-content: center;
         align-items: center;
@@ -743,7 +763,7 @@ a{
 
     .websites-grid{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(430px,1fr));
         grid-column-gap: 40px;
         grid-row-gap: 40px;
         
@@ -758,9 +778,6 @@ a{
             .text-wrapper{
                 position: absolute;
                 top: 0;
-            }
-
-            &:hover{
             }
         }
     }
@@ -838,6 +855,20 @@ a{
         font-size: 1em;
         color: $color-light;
 
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus
+        input:-webkit-autofill, 
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            -webkit-text-fill-color: white;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
         input,textarea{
             border:none;
             margin-bottom: 1em;
@@ -897,7 +928,7 @@ footer{
         color: $color-medium;
         font-family: 'Heebo';
         font-size: 1em;
-        margin: 2.5em 0 2.5em 0;
+        margin: 2.5em 0 3.5em 0;
     }
 
     .info{
@@ -1028,7 +1059,7 @@ footer{
     }
 
     #work .categories{
-        margin: 30px 0 70px;
+        margin: 30px 0 80px;
     }
 
     #contact{
@@ -1070,6 +1101,10 @@ footer{
             svg{
                 width:930px;
             }
+    }
+
+    #work .websites-grid{
+        grid-template-columns: repeat(auto-fit, minmax(380px,1fr));
     }
 }
 
@@ -1161,7 +1196,7 @@ footer{
         .left img{
             position: absolute;
             bottom:0;
-            right:0;
+            right:25px;
         }
 
         .paragraph{
@@ -1230,8 +1265,16 @@ footer{
         }
     }
 
+    #contact .container .left img{
+        right:15px;
+    }
+
+    .container{
+        padding: 0 15px;
+    }
+
     #about .left{
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
 
     #work .websites-grid{
@@ -1261,6 +1304,10 @@ footer{
         font-size: 14px;
     }
 
+    .btn{
+        font-size:16px;
+    }
+
     .popup .popup-container{
         margin: 0 15px;
     }
@@ -1269,6 +1316,9 @@ footer{
         padding: 0 15px;
     }
 
+    #work .categories{
+        margin: 25px 0 60px;
+    }
 
     #hero{
 
@@ -1284,7 +1334,7 @@ footer{
             padding-top:16vh;
         }
 
-        .subtitle span{
+        .subtitle .break{
             display: block;
         }
 
@@ -1295,7 +1345,7 @@ footer{
 
     
     #what {
-        padding: 10em 0 8em;
+        padding: 8em 0 8em;
 
         .container{
             height:540px;
@@ -1329,5 +1379,17 @@ footer{
 }
 
 @media only screen and (max-width: 440px){
-    //images
+    
+    #about .right {
+        height:290px;
+    }
+
+    #contact .left .img img{
+        height:270px;
+    }
+
+    #contact .container .left img{
+        bottom:-50%;
+    }
+
 }
