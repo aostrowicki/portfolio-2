@@ -1,24 +1,33 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useRef } from 'react'
 import Button from '../components/Button'
 import about from '../assets/about.svg'
 import { NavContext } from '../context'
 import { useInView } from 'react-intersection-observer'
+import gsap from 'gsap'
 
 export default function About() {
 
     const { active, setActive } = useContext(NavContext);
+    const container = useRef(null);
 
     const [ref, inView, entry] = useInView({
         threshold: 0.7,
     });
 
     useEffect(() => {
+        gsap.set(container.current.children, { autoAlpha: 0, x: '-=50' });
+    }, []);
+
+    useEffect(() => {
         inView ? setActive('about') : '';
+
+        inView ? gsap.to(container.current.children, { autoAlpha: 1, x: '0', duration: 0.8, ease: 'power1.out',stagger:0.2 }) : '';
+
     }, [inView]);
 
     return (
         <section id="about" ref={ref}>
-            <div className="container">
+            <div className="container" ref={container}>
                 <div className="left">
                     <h1 className="header">About me</h1>
                     <p className="paragraph">
@@ -30,12 +39,12 @@ export default function About() {
                             <style>{`.cls-1,.cls-2,.cls-3{fill:none;}.cls-2,.cls-3{stroke:#fff;stroke-linecap:round;stroke-width:1.5px;}.cls-2{stroke - linejoin:round;}.cls-3{stroke - miterlimit:10;}`}</style>
                         </defs>
                             <g id="arrow-down">
-                                <rect class="cls-1" width="16" height="16" />
+                                <rect className="cls-1" width="16" height="16" />
                                 <g id="arrow">
-                                    <line class="cls-2" x1="8" y1="9" x2="8" y2="1" />
-                                    <polyline class="cls-2" points="12 5 8 9 4 5" />
+                                    <line className="cls-2" x1="8" y1="9" x2="8" y2="1" />
+                                    <polyline className="cls-2" points="12 5 8 9 4 5" />
                                 </g>
-                                <line class="cls-3" x1="3" y1="15" x2="13" y2="15" />
+                                <line className="cls-3" x1="3" y1="15" x2="13" y2="15" />
                             </g>
                         </svg>
                     </Button>

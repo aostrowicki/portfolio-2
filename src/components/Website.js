@@ -1,19 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import github from '../assets/github.svg'
 import close from '../assets/close.svg'
+import gsap from 'gsap'
 
 export default function Website({ title, img, href, githref, tools, work }) {
 
     const swiper = useMediaQuery({ maxWidth: 900 })
     const [showPopup, setShowPopup] = useState(false);
+    const pop = useRef(null);
+
+    useEffect(() => {
+        showPopup ? document.querySelector('body').style.overflowY = "hidden" : document.querySelector('body').style.overflowY = "auto";
+        showPopup ? document.querySelector('body').style.marginRight = "12px" : document.querySelector('body').style.marginRight = "0px";
+        gsap.set(pop.current, { autoAlpha: 0 });
+        showPopup ? gsap.to(pop.current, { autoAlpha: 1, transform: 'scale(1)', duration: 0.15, ease: 'power1.inOut' }) : '';
+    }, [showPopup])
 
     return (
         <>
             <div onClick={() => setShowPopup(true)} className="websites-item" style={{ backgroundImage: `url(${img})` }} />
 
             {showPopup &&
-                <><div className="popup">
+                <><div className="popup" ref={pop}>
                     <div className="popup-container">
                         <div className="close-btn" onClick={() => setShowPopup(false)}>
                             <img src={close} />

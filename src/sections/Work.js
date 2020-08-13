@@ -3,13 +3,13 @@ import Websites from '../components/Websites'
 import Icons from '../components/Icons'
 import Illustrations from '../components/Illustrations'
 import { NavContext } from '../context'
-import { useInView } from 'react-intersection-observer'
+import InView, { useInView } from 'react-intersection-observer'
 
 export default function Work() {
 
     const categories = ['Websites', 'Icons', 'Illustrations'];
     const [active1, setActive1] = useState(categories[0]);
-
+    const [active2, setActive2] = useState(false);
     const { active, setActive } = useContext(NavContext);
 
     const [ref, inView, entry] = useInView({
@@ -18,6 +18,7 @@ export default function Work() {
 
     useEffect(() => {
         inView ? setActive('work') : '';
+        inView ? setActive2(true) : '';
     }, [inView]);
 
     return (
@@ -31,7 +32,7 @@ export default function Work() {
                     ))}
                 </div>
 
-                {active1 === 'Websites' && <Websites />}
+                {active1 === 'Websites' && <Websites active={active2} />}
                 {active1 === 'Icons' && <Icons />}
                 {active1 === 'Illustrations' && <Illustrations />}
             </div>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans:wght@400;600;700&family=Quicksand&display=swap");
 body {
-  background: black;
+  background: #000;
   margin: 0;
   padding: 0;
 }
@@ -328,7 +328,7 @@ a {
   line-height: 3;
 }
 
-.sidebar .menu::before {
+.sidebar .menu span {
   display: block;
   content: '';
   height: calc(100% - 3em);
@@ -736,6 +736,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   pointer-events: none;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .popup .close-btn {
@@ -875,8 +878,8 @@ a {
 #work .websites-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(430px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  -ms-grid-columns: (minmax(440px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   grid-column-gap: 40px;
   grid-row-gap: 40px;
 }

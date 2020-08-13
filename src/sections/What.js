@@ -6,7 +6,7 @@ import dev from '../assets/dev.svg'
 import { useMediaQuery } from 'react-responsive'
 import { NavContext } from '../context'
 import { useInView } from 'react-intersection-observer'
-import gsap from 'gsap';
+import gsap from 'gsap'
 
 export default function What() {
 
@@ -14,39 +14,42 @@ export default function What() {
     const { active, setActive } = useContext(NavContext);
     const circleRef = useRef(null);
     const listRef = useRef(null);
-    let images;
+    let images, description;
 
     const [ref, inView, entry] = useInView({
         threshold: 0.5,
     });
 
     useEffect(() => {
+        gsap.set(circleRef.current, { clipPath: "inset(0 0 100% 0)" });
+
+        images = [...listRef.current.children].map(element => {
+            return element.children[0];
+        });
+        description = [...listRef.current.children].map(element => {
+            return element.children[1];
+        });
+
+        gsap.set(description, { autoAlpha: 0, x: '-=20' });
+        gsap.set(images, { clipPath: "inset(0 0 100% 0)" });
+    }, []);
+
+    useEffect(() => {
         inView ? setActive('what') : '';
+
+        const tl = gsap.timeline();
+        images = [...listRef.current.children].map(element => {
+            return element.children[0];
+        });
+        description = [...listRef.current.children].map(element => {
+            return element.children[1];
+        });
+
+        if (inView) {
+            tl.to(circleRef.current, { duration: 2, clipPath: "inset(0% 0 -10% 0)", ease: 'power1.easeOut' })
+                .to(images, { duration: 0.15, clipPath: "inset(0% 0 0% 0)", ease: 'power0.easeOut', stagger: 0.2 }, '-=1.7').to(description, { duration: 0.45, autoAlpha: 1, x: '0', ease: 'power1.easeOut', stagger: 0.2 }, '-=1.65');
+        }
     }, [inView]);
-
-    // useEffect(() => {
-    //     gsap.set(circleRef.current, { clipPath: "inset(0 0 100% 0)" });
-
-    //     images = [...listRef.current.children].map(element => {
-    //         return element.children[0];
-    //     });
-
-    //     gsap.set(images, { clipPath: "inset(0 0 100% 0)" });
-    // }, []);
-
-    // useEffect(() => {
-    //     images = [...listRef.current.children].map(element => {
-    //         return element.children[0];
-    //     });
-
-    //     const tl = gsap.timeline();
-
-    //     active === 'what' ?
-    //         tl.to(circleRef.current, { duration: 2, clipPath: "inset(0% 0 -10% 0)", ease: 'power1.easeOut' })
-    //             .to(images, { duration: 0.15, clipPath: "inset(0% 0 0% 0)", ease: 'power0.easeOut', stagger: 0.25 }, '-=1.7') :
-    //         tl.to(circleRef.current, { duration: 1.5, clipPath: "inset(0% 0 100% 0)", ease: 'power1.easeIn' })
-    //             .to(images, { duration: 0.1, clipPath: "inset(0% 0 100% 0)", ease: 'power0.easeIn', stagger: { each: 0.2, from: 'end' } }, '-=1.25');
-    // }, [active]);
 
     return (
         <section id="what" ref={ref}>
