@@ -204,7 +204,7 @@ a{
 
 .icon-btn{
     padding:0.8em;
-    background:$color-medium;
+    background:$color-dark;
     border-radius:50%;
     transition: background-color 0.1s ease-in-out;
 
@@ -256,6 +256,7 @@ a{
 
 
 .sidebar{
+    opacity:0;
     width:220px;
     height:100vh;
     position:fixed;
@@ -472,7 +473,8 @@ a{
 #hero{
 
     .container{
-        text-align: center;        
+        text-align: center;   
+        opacity:0;     
     }
 
     .subtitle{
@@ -748,6 +750,15 @@ a{
         
         .link{
             cursor:pointer;
+
+            &:not(:first-child){
+                text-decoration: line-through;
+
+                &:hover{
+                    cursor:default;
+                    color:$color-light;
+                }
+            }
         }
 
         .loader:not(:last-child){
@@ -948,7 +959,6 @@ footer{
         }
 
         img{
-            width:28px;
             vertical-align: middle;
         }
     }

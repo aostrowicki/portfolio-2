@@ -48,8 +48,8 @@ export default function Website({ title, img, href, githref, tools, work }) {
                             </ul>
 
                             <div className="btn-container">
-                                <a href={href} className="btn">View Site</a>
-                                {githref && <a href={githref} className="btn nowidth"><img src={github} /></a>}
+                                <a href={href} target="_blank" className="btn">View Site</a>
+                                {githref && <a href={githref} target="_blank" className="btn nowidth"><img src={github} /></a>}
                             </div>
                         </div>
                     </div>

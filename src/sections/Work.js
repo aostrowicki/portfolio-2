@@ -9,7 +9,6 @@ export default function Work() {
 
     const categories = ['Websites', 'Icons', 'Illustrations'];
     const [active1, setActive1] = useState(categories[0]);
-    const [active2, setActive2] = useState(false);
     const { active, setActive } = useContext(NavContext);
 
     const [ref, inView, entry] = useInView({
@@ -18,7 +17,6 @@ export default function Work() {
 
     useEffect(() => {
         inView ? setActive('work') : '';
-        inView ? setActive2(true) : '';
     }, [inView]);
 
     return (
@@ -27,12 +25,12 @@ export default function Work() {
                 <h1 className="header">My work</h1>
                 <div className="categories">
                     {categories.map(item => (
-                        <React.Fragment key={item}><span className={`link ${active1 === item ? 'active' : ''}`} onClick={() => setActive1(item)} key={item}>{item}</span>
+                        <React.Fragment key={item}><span className={`link ${active1 === item ? 'active' : ''}`} key={item}>{item}</span>
                             <span className="loader"></span></React.Fragment >
                     ))}
                 </div>
 
-                {active1 === 'Websites' && <Websites active={active2} />}
+                {active1 === 'Websites' && <Websites />}
                 {active1 === 'Icons' && <Icons />}
                 {active1 === 'Illustrations' && <Illustrations />}
             </div>

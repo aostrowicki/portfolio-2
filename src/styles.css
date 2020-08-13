@@ -245,7 +245,7 @@ a {
 
 .icon-btn {
   padding: 0.8em;
-  background: #232323;
+  background: #0D0D0D;
   border-radius: 50%;
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
@@ -299,6 +299,7 @@ a {
 }
 
 .sidebar {
+  opacity: 0;
   width: 220px;
   height: 100vh;
   position: fixed;
@@ -547,6 +548,7 @@ a {
 
 #hero .container {
   text-align: center;
+  opacity: 0;
 }
 
 #hero .subtitle {
@@ -863,6 +865,15 @@ a {
   cursor: pointer;
 }
 
+#work .categories .link:not(:first-child) {
+  text-decoration: line-through;
+}
+
+#work .categories .link:not(:first-child):hover {
+  cursor: default;
+  color: #474747;
+}
+
 #work .categories .loader:not(:last-child) {
   margin: 0 45px;
   display: inline-block;
@@ -1076,7 +1087,6 @@ footer .info span {
 }
 
 footer .info img {
-  width: 28px;
   vertical-align: middle;
 }
 

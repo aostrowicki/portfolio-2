@@ -4,6 +4,7 @@ import about from '../assets/about.svg'
 import { NavContext } from '../context'
 import { useInView } from 'react-intersection-observer'
 import gsap from 'gsap'
+import CV from '../Adam-Ostrowicki.pdf'
 
 export default function About() {
 
@@ -21,7 +22,7 @@ export default function About() {
     useEffect(() => {
         inView ? setActive('about') : '';
 
-        inView ? gsap.to(container.current.children, { autoAlpha: 1, x: '0', duration: 0.8, ease: 'power1.out',stagger:0.2 }) : '';
+        inView ? gsap.to(container.current.children, { autoAlpha: 1, x: '0', duration: 0.8, ease: 'power1.out', stagger: 0.2 }) : '';
 
     }, [inView]);
 
@@ -34,7 +35,7 @@ export default function About() {
                         I'm young and passionate Front-end Developer from Poland. I have Bachelor's degree in IT. I have experience with programming in many languages, but since graduating I focused on coding and designing websites. Bellow you can see some of my recent works.
                 <span>Currently looking for a job as a Front-end Developer.</span>
                     </p>
-                    <Button target="#" type="down">Get my CV
+                    <Button target={CV} type="down" download="Adam-Ostrowicki">Get my CV
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="18"><defs>
                             <style>{`.cls-1,.cls-2,.cls-3{fill:none;}.cls-2,.cls-3{stroke:#fff;stroke-linecap:round;stroke-width:1.5px;}.cls-2{stroke - linejoin:round;}.cls-3{stroke - miterlimit:10;}`}</style>
                         </defs>

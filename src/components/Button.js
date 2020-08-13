@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Button({ type, target, children, square }) {
+export default function Button({ type, target, children, download }) {
     return (
-        <a href={target} className={`btn${(type === 'right') ? ' right' : ''} ${(type === 'down') ? ' down' : ''} ${(square) ? ' square' : ''}`}>
+        <a href={target} download={download} className={`btn${(type === 'right') ? ' right' : ''} ${(type === 'down') ? ' down' : ''}`}>
             {children}
         </a>
     )

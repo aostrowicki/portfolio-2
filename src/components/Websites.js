@@ -11,7 +11,7 @@ export default function Websites(active) {
         <>
             <div className="websites-grid">
                 <Website href="https://aostrowicki.com" githref="https://github.com/aostrowicki/portfolio-2" img={p2} title="Portfolio" work={["Website Design", "Implementing Design", "Illustrations", "Icons"]} tools={["React", "Adobe Illustrator", "Adobe XD"]} />
-                <Website href="https://outdo.org.in" img={outdo} title="OutDo" work={["Implementing Design", "Assets Export", "Animations Optimization", "Design Improvements"]} tools={["Adobe Illustrator", "Adobe After Effects", "Lottie.js"]} />
+                <Website href="https://outdo.org.in" img={outdo} title="OutDo" work={["Implementing Design", "Assets Export", "Animations Optimization", "Design Improvements"]} tools={["Adobe Illustrator", "Adobe After Effects", "Lottie"]} />
                 <Website href="https://hungry-leavitt-3367f0.netlify.app" githref="https://github.com/aostrowicki/barber-shop" img={barb} title="BBarber" work={["Website Design", "Implementing Design", "Icons"]} tools={["Figma", "Adobe Illustrator"]} />
                 <Website href="https://eloquent-wing-0f7019.netlify.app" githref="https://github.com/aostrowicki/portfolio-website" img={p1} title="Portfolio" work={["Website Design", "Implementing Design", "Illustrations"]} tools={["Figma", "Adobe Illustrator"]} />
             </div>

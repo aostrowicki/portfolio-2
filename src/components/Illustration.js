@@ -6,7 +6,7 @@ export default function Illustration({ title, img }) {
 
     return (
         <>
-            <div className="illustration-item" style={{ backgroundImage: `url(${img})` }} onClick={() => setShowPopup(true)}>
+            <div className="illustrations-item" style={{ backgroundImage: `url(${img})` }} onClick={() => setShowPopup(true)}>
                 <h4 className="title">{title}</h4>
             </div>
 
