@@ -411,7 +411,7 @@ a{
 
 @media only screen and (max-width:750px){
     .navbar.hidden{
-        width:93px;
+        width:86px;
         background:transparent;
         margin-top: 0px;
     }
@@ -456,15 +456,6 @@ a{
                 }
             }
         }
-    }
-}
-
-
-@media only screen and (max-width:750px){
-    .navbar.hidden{
-        width:86px;
-        background:transparent;
-        margin-top: 0px;
     }
 }
 
@@ -886,12 +877,16 @@ a{
             border:none;
             margin-bottom: 1em;
             color: #fff;
+
+            &[type="submit"]{
+                appearance: none;
+            }
             
             &:not([type="submit"]){
                 width:550px;
                 background:none;
                 border:1px solid $color-medium;
-                font-size: 1em; 
+                font-size: 16px; 
                 font-family: 'Heebo', sans-serif;
                 padding:0.7em;
                 resize: none;
@@ -1277,6 +1272,10 @@ footer{
         }
     }
 
+    .popup .subheader {
+        display: none;
+    }
+
     #contact .container .left img{
         right:15px;
     }
@@ -1332,12 +1331,24 @@ footer{
         margin: 25px 0 60px;
     }
 
+    #about{
+
+        .left .paragraph{
+            margin-bottom:45px;
+        }
+
+        .left .header{
+            margin-bottom:20px;
+        }
+    }
+
     #hero{
 
         .header{
             text-align: left;
-            margin-bottom: 65px;
+            margin-bottom: 45px;
             margin-top:15px;
+            font-size:31px;
         }
 
         .subtitle{
@@ -1362,13 +1373,18 @@ footer{
         .container{
             height:540px;
 
+            .left{
+                margin-bottom: 45px;
+            }
+
             .right .feature:nth-child(even) {
                 margin-left: 25px;
             }
 
             .circle{
+                // display: none;
                 bottom:-40px;
-                left:-15px;
+                left:-25px;
             }
         } 
     }
@@ -1378,7 +1394,7 @@ footer{
     }
     
     .header{
-        font-size:36px;
+        font-size:31px;
     }
 
     .subheader{

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react'
 import Button from '../components/Button'
 import arrow from '../assets/arrow-right.svg'
 import hero from '../assets/hero.svg'
+import heroSmall from '../assets/hero-small.svg'
 import { NavContext } from '../context'
 import { useInView } from 'react-intersection-observer'
 import gsap from 'gsap'
@@ -35,7 +36,7 @@ export default function Hero() {
                 <Button target="#work" type="right">See my work <img src={arrow} /></Button>
 
                 <div className="img">
-                    <img src={hero} />
+                    {window.innerWidth > 440 ? <img src={hero} /> : <img src={heroSmall} />}
                 </div>
             </div>
         </section>

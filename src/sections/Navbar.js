@@ -11,7 +11,8 @@ export default function Navbar() {
     useEffect(() => {
         let previousY = window.pageYOffset;
         window.onscroll = () => {
-            if (window.pageYOffset > previousY && !open) setHidden(true); else setHidden(false);
+            if (window.pageYOffset > previousY && !open) setHidden(true);
+            if (window.pageYOffset < previousY && !open && window.innerWidth > 750) setHidden(false);
             previousY = window.pageYOffset;
         }
     }, [open]);

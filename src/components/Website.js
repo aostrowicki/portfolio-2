@@ -36,14 +36,14 @@ export default function Website({ title, img, href, githref, tools, work }) {
                             <h4 className="title">Responsible for:</h4>
                             <ul>
                                 {work && work.map((item) => {
-                                    return <li className="paragraph" id={item}>{item}</li>
+                                    return <li key={item} className="paragraph" id={item}>{item}</li>
                                 })}
                             </ul>
 
                             <h4 className="title">Tools used:</h4>
                             <ul>
                                 {tools && tools.map((item) => {
-                                    return <li className="paragraph" id={item}>{item}</li>
+                                    return <li key={item} className="paragraph" id={item}>{item}</li>
                                 })}
                             </ul>
 

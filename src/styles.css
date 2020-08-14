@@ -491,7 +491,7 @@ a {
 
 @media only screen and (max-width: 750px) {
   .navbar.hidden {
-    width: 93px;
+    width: 86px;
     background: transparent;
     margin-top: 0px;
   }
@@ -535,14 +535,6 @@ a {
   .menu ul li a:hover {
     background: none;
     color: #FF1E56;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .navbar.hidden {
-    width: 86px;
-    background: transparent;
-    margin-top: 0px;
   }
 }
 
@@ -1012,11 +1004,17 @@ textarea:-webkit-autofill:focus,
   color: #fff;
 }
 
+#contact form input[type="submit"], #contact form textarea[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 #contact form input:not([type="submit"]), #contact form textarea:not([type="submit"]) {
   width: 550px;
   background: none;
   border: 1px solid #232323;
-  font-size: 1em;
+  font-size: 16px;
   font-family: 'Heebo', sans-serif;
   padding: 0.7em;
   resize: none;
@@ -1348,6 +1346,9 @@ footer .links a:not(:first-child) {
     width: 100%;
     height: unset;
   }
+  .popup .subheader {
+    display: none;
+  }
   #contact .container .left img {
     right: 15px;
   }
@@ -1391,10 +1392,17 @@ footer .links a:not(:first-child) {
   #work .categories {
     margin: 25px 0 60px;
   }
+  #about .left .paragraph {
+    margin-bottom: 45px;
+  }
+  #about .left .header {
+    margin-bottom: 20px;
+  }
   #hero .header {
     text-align: left;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
     margin-top: 15px;
+    font-size: 31px;
   }
   #hero .subtitle {
     font-size: 1em;
@@ -1413,18 +1421,21 @@ footer .links a:not(:first-child) {
   #what .container {
     height: 540px;
   }
+  #what .container .left {
+    margin-bottom: 45px;
+  }
   #what .container .right .feature:nth-child(even) {
     margin-left: 25px;
   }
   #what .container .circle {
     bottom: -40px;
-    left: -15px;
+    left: -25px;
   }
   #what .feature .img-circle {
     margin-right: 30px;
   }
   .header {
-    font-size: 36px;
+    font-size: 31px;
   }
   .subheader {
     font-size: 20px;

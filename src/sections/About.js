@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useRef } from 'react'
 import Button from '../components/Button'
 import about from '../assets/about.svg'
+import aboutSmall from '../assets/about-small.svg'
 import { NavContext } from '../context'
 import { useInView } from 'react-intersection-observer'
 import gsap from 'gsap'
@@ -52,7 +53,7 @@ export default function About() {
                 </div>
 
                 <div className="right">
-                    {<img src={about} />}
+                    {window.innerWidth > 440 ? <img src={about} /> : <img src={aboutSmall} />}
                 </div>
 
             </div>
