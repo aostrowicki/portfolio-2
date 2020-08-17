@@ -33,7 +33,7 @@ export default function Hero() {
             <div className="container" ref={container}>
                 <h4 className="subtitle"><span className="break"><span className="color">I'm Adam</span>,</span> Frontend Developer and UI Designer</h4>
                 <h1 className="header">I will create a modern website for you</h1>
-                <Button target="#work" type="right">See my work <img src={arrow} /></Button>
+                <Button target="#work" type="right">See my work <img src={arrow} alt="arrow icon" /></Button>
 
                 <div className="img">
                     {window.innerWidth > 440 ? <img src={hero} alt="hero" /> : <img src={heroSmall} alt="hero" />}

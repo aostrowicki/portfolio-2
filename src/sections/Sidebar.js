@@ -51,7 +51,7 @@ export default function Sidebar() {
                                     (active === 'contact' ? '#footer' : ''
                                     )))))
                 }>
-                    <img src={scroll} />
+                    <img src={scroll} alt="scroll icon" />
                     <div className="paragraph">Scroll down</div>
                 </a>
             </div>
