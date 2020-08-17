@@ -27,7 +27,7 @@ export default function Sidebar() {
         <div className="sidebar" ref={side}>
             <div className="logo">
                 <a href="#">
-                    <img src={logo}></img>
+                    <img src={logo} alt="logo"></img>
                 </a>
             </div>
 

@@ -36,7 +36,7 @@ export default function Hero() {
                 <Button target="#work" type="right">See my work <img src={arrow} /></Button>
 
                 <div className="img">
-                    {window.innerWidth > 440 ? <img src={hero} /> : <img src={heroSmall} />}
+                    {window.innerWidth > 440 ? <img src={hero} alt="hero" /> : <img src={heroSmall} alt="hero" />}
                 </div>
             </div>
         </section>

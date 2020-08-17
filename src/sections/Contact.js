@@ -24,7 +24,7 @@ export default function Contact() {
                     <h1 className="header">Contact me</h1>
                     <span className="paragraph">Don't wanna use a form? Send me an <a href="mailto:a.ostrowicki10@gmail.com">e-mail</a> </span>
                     <div className="img">
-                        {window.innerWidth > 440 ? <img src={mail} /> : <img src={mailSmall} />}
+                        {window.innerWidth > 440 ? <img src={mail} alt="mail mailbox contact" /> : <img src={mailSmall} alt="mail mailbox contact" />}
                     </div>
                 </div>
                 <div className="right">

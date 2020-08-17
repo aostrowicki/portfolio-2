@@ -53,7 +53,7 @@ export default function About() {
                 </div>
 
                 <div className="right">
-                    {window.innerWidth > 440 ? <img src={about} /> : <img src={aboutSmall} />}
+                    {window.innerWidth > 440 ? <img src={about} alt="me" /> : <img src={aboutSmall} alt="me" />}
                 </div>
 
             </div>

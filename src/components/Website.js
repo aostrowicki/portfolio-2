@@ -25,7 +25,7 @@ export default function Website({ title, img, href, githref, tools, work }) {
                 <><div className="popup" ref={pop}>
                     <div className="popup-container">
                         <div className="close-btn" onClick={() => setShowPopup(false)}>
-                            <img src={close} />
+                            <img src={close} img="website portfolio work" />
                         </div>
 
                         <div className="popup-img" style={{ backgroundImage: `url(${img})` }}>
@@ -49,7 +49,7 @@ export default function Website({ title, img, href, githref, tools, work }) {
 
                             <div className="btn-container">
                                 <a href={href} target="_blank" className="btn">View Site</a>
-                                {githref && <a href={githref} target="_blank" className="btn nowidth"><img src={github} /></a>}
+                                {githref && <a href={githref} target="_blank" className="btn nowidth"><img src={github} alt="github icon" /></a>}
                             </div>
                         </div>
                     </div>
