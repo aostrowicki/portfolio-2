@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19e5377c53fcc8426dbcce075c4a176b",
+    "revision": "940cec6ed96bc947cccf516f9d1e1dac",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.f656da75.chunk.css"
   },
   {
-    "revision": "e9df4dd2b220ed666e72",
+    "revision": "ab0363c3f77789f2d004",
     "url": "/static/css/main.524bcc92.chunk.css"
   },
   {
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.4571dd60.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e9df4dd2b220ed666e72",
-    "url": "/static/js/main.77346fe9.chunk.js"
+    "revision": "ab0363c3f77789f2d004",
+    "url": "/static/js/main.e6c87ce4.chunk.js"
   },
   {
     "revision": "f39dd5e0874fba7be551",
     "url": "/static/js/runtime-main.10b11e94.js"
   },
   {
-    "revision": "04192b5acf7d5375bf209e4a6d2eaddc",
-    "url": "/static/media/Adam-Ostrowicki.04192b5a.pdf"
+    "revision": "42ee9d788ae4c0f8537e0b650a829f47",
+    "url": "/static/media/Adam-Ostrowicki.42ee9d78.pdf"
   },
   {
     "revision": "e6310f78f83fa745d68e4fe16ce2e89f",
