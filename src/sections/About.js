@@ -33,7 +33,7 @@ export default function About() {
                 <div className="left">
                     <h1 className="header">About me</h1>
                     <p className="paragraph">
-                        I'm young and passionate Front-end Developer from Poland. I have Bachelor's degree in IT. I have experience with programming in many languages, but since graduating I focused on coding and designing websites. Bellow you can see some of my recent works.
+                        I'm young and passionate Front-end Developer with Bachelor's degree in IT. I have experience with programming in many languages, but since graduating I focused on coding and designing websites. Bellow you can see some of my recent works.
                 <span>Currently looking for a job as a Front-end Developer.</span>
                     </p>
                     <Button target={CV} type="down" download="Adam-Ostrowicki">Get my CV
