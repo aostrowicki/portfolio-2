@@ -655,10 +655,6 @@ a{
         padding-top: 5.5rem;
     }
 
-    ul:not(:last-of-type){
-        margin-bottom: 2rem;
-    }
-
     .nowidth{
         min-width:unset;
         width:56px;
@@ -685,6 +681,13 @@ a{
 
     .title{
         margin-bottom:4px;
+    }
+
+    .paragraph:not(li){
+        line-height: 1.4;
+        font-family: 'Heebo',sans-serif;
+        color:rgb(95, 95, 95);
+        margin-bottom: 2rem;
     }
 
     li{
@@ -805,10 +808,6 @@ a{
                 left: 30px;
                 transition: all 0.1s ease-in-out;
                 opacity: 0;
-            }
-
-            &:hover{
-
             }
         }
     }
@@ -1145,7 +1144,7 @@ footer{
             font-size:20px;
         }
 
-        ul:not(:last-of-type){
+        .paragraph:not(li){
             margin-bottom: 1.2rem;
         }
 

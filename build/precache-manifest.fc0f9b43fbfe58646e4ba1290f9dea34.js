@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d8c7f3282946d8eeaa10df294847591",
+    "revision": "d8e174c3d59afaf72f09847a2b9cb509",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.f656da75.chunk.css"
   },
   {
-    "revision": "dc22f4cce56dfff2f0c3",
-    "url": "/static/css/main.524bcc92.chunk.css"
+    "revision": "b0a1a1e535ca1da539c8",
+    "url": "/static/css/main.739d1c51.chunk.css"
   },
   {
     "revision": "3bf129492ff999532b0b",
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.4571dd60.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dc22f4cce56dfff2f0c3",
-    "url": "/static/js/main.ed629d3d.chunk.js"
+    "revision": "b0a1a1e535ca1da539c8",
+    "url": "/static/js/main.918fbf1b.chunk.js"
   },
   {
     "revision": "f39dd5e0874fba7be551",
     "url": "/static/js/runtime-main.10b11e94.js"
   },
   {
-    "revision": "2e69d28dfd3f1bc08bf7625a2f1d5256",
-    "url": "/static/media/Adam-Ostrowicki.2e69d28d.pdf"
+    "revision": "df06ecf1c88a6780b9853efd7812b19b",
+    "url": "/static/media/Adam-Ostrowicki.df06ecf1.pdf"
   },
   {
     "revision": "e6310f78f83fa745d68e4fe16ce2e89f",
@@ -100,10 +100,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/illu2.3ce1d62a.png"
   },
   {
-    "revision": "653b3f67222bbd5736b3ba069820ae52",
-    "url": "/static/media/illustration.653b3f67.svg"
-  },
-  {
     "revision": "01224f96c6b0bfaf282be5f0d0b3777d",
     "url": "/static/media/linkedin.01224f96.svg"
   },
@@ -128,15 +124,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/outdo.a18c6961.png"
   },
   {
+    "revision": "16c4ca8f3bcccfe43f8504c9826c6020",
+    "url": "/static/media/pokecards.16c4ca8f.png"
+  },
+  {
     "revision": "075d68c113dd5cdfe59d17290f5d918f",
     "url": "/static/media/portfolio-2.075d68c1.png"
   },
   {
-    "revision": "f9f0d23f8e24711fcd2c0cbeb6104697",
-    "url": "/static/media/portfolio.f9f0d23f.png"
-  },
-  {
     "revision": "3e83f85f40c675df5a5a55165cb4301e",
     "url": "/static/media/scroll.3e83f85f.svg"
+  },
+  {
+    "revision": "6247d42c02ce348a33ac5275c94c56cc",
+    "url": "/static/media/tools.6247d42c.svg"
   }
 ]);

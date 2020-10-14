@@ -22,9 +22,7 @@ export default function Hero() {
 
     useEffect(() => {
         gsap.set(container.current, { y: '-=10', autoAlpha: 0 });
-
         const tl = gsap.timeline({ defaults: { ease: 'power1.inOut' } });
-
         tl.to(container.current, { y: '+=20', autoAlpha: 1, duration: 0.5 }, '+=0.7');
     }, []);
 

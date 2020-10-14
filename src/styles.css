@@ -749,10 +749,6 @@ a {
   padding-top: 5.5rem;
 }
 
-.popup ul:not(:last-of-type) {
-  margin-bottom: 2rem;
-}
-
 .popup .nowidth {
   min-width: unset;
   width: 56px;
@@ -786,6 +782,13 @@ a {
 
 .popup .title {
   margin-bottom: 4px;
+}
+
+.popup .paragraph:not(li) {
+  line-height: 1.4;
+  font-family: 'Heebo',sans-serif;
+  color: #5f5f5f;
+  margin-bottom: 2rem;
 }
 
 .popup li {
@@ -1231,7 +1234,7 @@ footer .links a:not(:first-child) {
   .popup .title {
     font-size: 20px;
   }
-  .popup ul:not(:last-of-type) {
+  .popup .paragraph:not(li) {
     margin-bottom: 1.2rem;
   }
   .popup .btn-container {

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import Feature from '../components/Feature'
-import illustration from '../assets/illustration.svg'
+import tools from '../assets/tools.svg'
 import des from '../assets/des.svg'
 import dev from '../assets/dev.svg'
 import { useMediaQuery } from 'react-responsive'
@@ -66,9 +66,9 @@ export default function What() {
                 </div>
 
                 <div className="right" ref={listRef}>
-                    <Feature img={des} title="Web Design" list={['Website Design', 'Landing Pages', 'Wireframing', 'Prototyping']} />
-                    <Feature img={dev} title="Web Development" list={['HTML/CSS', 'JavaScript', 'Animations', 'React.js']} />
-                    <Feature img={illustration} title="Graphic Design" list={['Icons', 'Illustrations', 'Logos']} />
+                    <Feature img={des} title="Web Design" list={['Website Design', 'Wireframing', 'Figma', 'Adobe Xd', 'Adobe Illustrator']} />
+                    <Feature img={dev} title="Web Development" list={['HTML/CSS', 'JavaScript (ES6+)', 'React', 'Redux', 'Redux Thunk', 'Styled Components', 'AJAX/Fetch']} />
+                    <Feature img={tools} title="Other Skills" list={['GSAP', 'Git', 'Webpack', 'NPM']} />
                 </div>
             </div>
         </section >
