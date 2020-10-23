@@ -5,6 +5,10 @@ $color-light:#474747;
 $color-medium:#232323;
 $color-dark:#0D0D0D;
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #000;
     margin:0;
@@ -954,6 +958,8 @@ footer{
 
         img{
             vertical-align: middle;
+            min-height:17px;
+            min-width: 22px;
         }
     }
 
