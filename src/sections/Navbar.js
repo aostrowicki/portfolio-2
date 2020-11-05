@@ -21,7 +21,7 @@ export default function Navbar() {
         <nav className={(hidden) ? 'navbar hidden' : 'navbar'}>
             <div className="container">
                 <div className="logo">
-                    <a href="#">
+                    <a href="https://www.aostrowicki.com">
                         <img src={logo} alt="logo"></img>
                     </a>
                 </div>

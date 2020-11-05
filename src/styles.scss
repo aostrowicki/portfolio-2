@@ -61,12 +61,13 @@ body{
 
 .subtitle{
     font-family: 'Open Sans', sans-serif;
-    font-weight:600;
+    font-weight:500;
     font-size: 1.125em;
     color: white;
 
     .color{
         color:$color-primary;
+        font-weight:500;
     }
 }
 
@@ -131,6 +132,22 @@ a{
         vertical-align: middle;
         transform:translateX(1em);
         transition: all 0.15s ease-in-out;
+    }
+
+    &.secondary{
+        background:transparent;
+        border-bottom: 1px solid white;
+        border-radius: unset;
+        padding:0;
+        min-width: unset;
+        margin-left: 30px;
+        transition: all 0.1s ease-in-out;
+        line-height: 18px;
+
+        &:hover{
+            color: $color-primary;
+            border-bottom:none;
+        }
     }
 
     &.right:hover{
@@ -466,10 +483,15 @@ a{
 //////////////////////////// HERO
 
 #hero{
+    margin-bottom: -6em;
 
     .container{
         text-align: center;   
-        opacity:0;     
+
+        div:first-child{
+            z-index:10;
+            position: relative;
+        }
     }
 
     .subtitle{
@@ -482,8 +504,8 @@ a{
     }
 
     .img{
-        height:480px;
-
+        height:430px;
+        
         & img{
             height:100%;
         }
@@ -495,7 +517,7 @@ a{
 //////////////////////////// ABOUT
 
 #about{ 
-    padding: 13em 0 4em;
+    padding: 16em 0 4em;
     
     .container{
         width:100%;
@@ -510,7 +532,7 @@ a{
     }
 
     .left{
-        max-width:600px;
+        max-width:450px;
 
         .header{
             margin-bottom: 30px;
@@ -549,7 +571,7 @@ a{
     }
 
     .right{
-        margin-left: 160px;
+        margin-left: 80px;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -591,7 +613,7 @@ a{
         overflow: hidden;
 
         svg{
-            width:1500px; 
+            width:1347px; 
         }
     }
 }
@@ -699,6 +721,7 @@ a{
         font-family: 'Heebo',sans-serif;
         color:rgb(95, 95, 95);
         
+        
 
         &::before{
             margin-right: 1.3em;
@@ -748,6 +771,7 @@ a{
         
         .link{
             cursor:pointer;
+            white-space: nowrap;
 
             &:not(:first-child){
                 text-decoration: line-through;
@@ -987,7 +1011,7 @@ footer{
     }
 
     #what .circle svg {
-        width: 1370px;
+        width: 1210px;
     }
 }
 
@@ -998,7 +1022,7 @@ footer{
     }
 
     #what .circle svg {
-        width: 1310px;
+        width: 1150px;
     }
 
     .popup .popup-container{
@@ -1043,7 +1067,6 @@ footer{
     }
 
     #about{
-        padding: 9em 0 0;
 
         .left{
             max-width: 450px;

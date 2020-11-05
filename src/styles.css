@@ -61,13 +61,14 @@ body {
 
 .subtitle {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.125em;
   color: white;
 }
 
 .subtitle .color {
   color: #FF1E56;
+  font-weight: 500;
 }
 
 .description {
@@ -135,6 +136,23 @@ a {
           transform: translateX(1em);
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+}
+
+.btn.secondary {
+  background: transparent;
+  border-bottom: 1px solid white;
+  border-radius: unset;
+  padding: 0;
+  min-width: unset;
+  margin-left: 30px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  line-height: 18px;
+}
+
+.btn.secondary:hover {
+  color: #FF1E56;
+  border-bottom: none;
 }
 
 .btn.right:hover img {
@@ -542,9 +560,17 @@ a {
   }
 }
 
+#hero {
+  margin-bottom: -6em;
+}
+
 #hero .container {
   text-align: center;
-  opacity: 0;
+}
+
+#hero .container div:first-child {
+  z-index: 10;
+  position: relative;
 }
 
 #hero .subtitle {
@@ -557,7 +583,7 @@ a {
 }
 
 #hero .img {
-  height: 480px;
+  height: 430px;
 }
 
 #hero .img img {
@@ -565,7 +591,7 @@ a {
 }
 
 #about {
-  padding: 13em 0 4em;
+  padding: 16em 0 4em;
 }
 
 #about .container {
@@ -587,7 +613,7 @@ a {
 }
 
 #about .left {
-  max-width: 600px;
+  max-width: 450px;
 }
 
 #about .left .header {
@@ -626,7 +652,7 @@ a {
 }
 
 #what .right {
-  margin-left: 160px;
+  margin-left: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,7 +706,7 @@ a {
 }
 
 #what .circle svg {
-  width: 1500px;
+  width: 1347px;
 }
 
 .img-popup {
@@ -862,6 +888,7 @@ a {
 
 #work .categories .link {
   cursor: pointer;
+  white-space: nowrap;
 }
 
 #work .categories .link:not(:first-child) {
@@ -1109,7 +1136,7 @@ footer .links a:not(:first-child) {
     padding: 10em 0 12em;
   }
   #what .circle svg {
-    width: 1370px;
+    width: 1210px;
   }
 }
 
@@ -1118,7 +1145,7 @@ footer .links a:not(:first-child) {
     padding: 0 40px 0 40px;
   }
   #what .circle svg {
-    width: 1310px;
+    width: 1150px;
   }
   .popup .popup-container {
     width: 100%;
@@ -1152,9 +1179,6 @@ footer .links a:not(:first-child) {
   }
   #work .illustrations-grid, #work .icons-grid, #work .websites-grid {
     grid-gap: 25px;
-  }
-  #about {
-    padding: 9em 0 0;
   }
   #about .left {
     max-width: 450px;

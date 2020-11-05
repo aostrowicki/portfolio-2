@@ -7,12 +7,13 @@ import InView, { useInView } from 'react-intersection-observer'
 
 export default function Work() {
 
-    const categories = ['Websites', 'Icons', 'Illustrations'];
-    const [active1, setActive1] = useState(categories[0]);
+    const categories = ['Websites', 'Web Apps', 'Illustrations'];
+    
+    const [activeTab, setActiveTab] = useState(categories[0]);
     const { active, setActive } = useContext(NavContext);
 
     const [ref, inView, entry] = useInView({
-        threshold: 0.6,
+        threshold: 0.5,
     });
 
     useEffect(() => {
@@ -25,14 +26,14 @@ export default function Work() {
                 <h1 className="header">My work</h1>
                 <div className="categories">
                     {categories.map(item => (
-                        <React.Fragment key={item}><span className={`link ${active1 === item ? 'active' : ''}`} key={item}>{item}</span>
+                        <React.Fragment key={item}><span className={`link ${activeTab === item ? 'active' : ''}`} key={item}>{item}</span>
                             <span className="loader"></span></React.Fragment >
                     ))}
                 </div>
 
-                {active1 === 'Websites' && <Websites />}
-                {active1 === 'Icons' && <Icons />}
-                {active1 === 'Illustrations' && <Illustrations />}
+                {activeTab === 'Websites' && <Websites />}
+                {activeTab === 'Web Apps' && <Icons />}
+                {activeTab === 'Illustrations' && <Illustrations />}
             </div>
         </section>
     )

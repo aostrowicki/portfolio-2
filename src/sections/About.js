@@ -36,20 +36,23 @@ export default function About() {
                         I'm young and passionate Front-end Developer from Poland. I'm experienced with designing and coding websites. I always try to be up to date with the newest trends and technologies. Bellow you can see some of my recent works.
                 <span>Currently looking for a job as a Front-end Developer.</span>
                     </p>
-                    <Button target={CV} type="down" download="Adam-Ostrowicki">Get my CV
+
+                    <div className="btn-container">
+                        <Button target={CV} type="down" download="Adam-Ostrowicki">Get my CV
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="18"><defs>
-                            <style>{`.cls-1,.cls-2,.cls-3{fill:none;}.cls-2,.cls-3{stroke:#fff;stroke-linecap:round;stroke-width:1.5px;}.cls-2{stroke - linejoin:round;}.cls-3{stroke - miterlimit:10;}`}</style>
-                        </defs>
-                            <g id="arrow-down">
-                                <rect className="cls-1" width="16" height="16" />
-                                <g id="arrow">
-                                    <line className="cls-2" x1="8" y1="9" x2="8" y2="1" />
-                                    <polyline className="cls-2" points="12 5 8 9 4 5" />
+                                <style>{`.cls-1,.cls-2,.cls-3{fill:none;}.cls-2,.cls-3{stroke:#fff;stroke-linecap:round;stroke-width:1.5px;}.cls-2{stroke - linejoin:round;}.cls-3{stroke - miterlimit:10;}`}</style>
+                            </defs>
+                                <g id="arrow-down">
+                                    <rect className="cls-1" width="16" height="16" />
+                                    <g id="arrow">
+                                        <line className="cls-2" x1="8" y1="9" x2="8" y2="1" />
+                                        <polyline className="cls-2" points="12 5 8 9 4 5" />
+                                    </g>
+                                    <line className="cls-3" x1="3" y1="15" x2="13" y2="15" />
                                 </g>
-                                <line className="cls-3" x1="3" y1="15" x2="13" y2="15" />
-                            </g>
-                        </svg>
-                    </Button>
+                            </svg>
+                        </Button>
+                    </div>
                 </div>
 
                 <div className="right">

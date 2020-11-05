@@ -17,7 +17,7 @@ export default function What() {
     let images, description;
 
     const [ref, inView, entry] = useInView({
-        threshold: 0.5,
+        threshold: 0.4,
     });
 
     useEffect(() => {
@@ -57,7 +57,7 @@ export default function What() {
                 <div className="circle" ref={circleRef}>
                     <svg viewBox="0 0 1500 1500">
                         {!smallCircle && <circle cx="0" cy="750" r="750" fill="none" stroke="#232323" strokeWidth="2px" />}
-                        {smallCircle && <circle cx="-555" cy="1100" r="750" fill="none" stroke="#232323" strokeWidth="3.5px"></circle>}
+                        {smallCircle && <circle cx="-555" cy="1100" r="750" fill="none" stroke="#232323" strokeWidth="3.5px" />}
                     </svg>
                 </div>
 

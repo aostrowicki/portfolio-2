@@ -26,7 +26,7 @@ export default function Sidebar() {
     return (
         <div className="sidebar" ref={side}>
             <div className="logo">
-                <a href="#">
+                <a href="https://www.aostrowicki.com">
                     <img src={logo} alt="logo"></img>
                 </a>
             </div>
