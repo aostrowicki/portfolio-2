@@ -86,7 +86,7 @@ body {
 .link {
   font-family: 'Heebo', sans-serif;
   font-size: 1em;
-  color: #474747;
+  color: #5f5f5f;
   position: relative;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -431,7 +431,7 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 5;
+  z-index: 30;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -571,6 +571,10 @@ a {
 #hero .container div:first-child {
   z-index: 10;
   position: relative;
+}
+
+#hero .container div {
+  opacity: 0;
 }
 
 #hero .subtitle {
@@ -893,6 +897,7 @@ a {
 
 #work .categories .link:not(:first-child) {
   text-decoration: line-through;
+  color: #474747;
 }
 
 #work .categories .link:not(:first-child):hover {

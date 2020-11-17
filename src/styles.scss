@@ -86,7 +86,7 @@ body{
 .link {
     font-family: 'Heebo', sans-serif;
     font-size: 1em;
-    color: $color-light;
+    color: #5f5f5f;
     position: relative;
     transition: all 0.15s ease-in-out;
 
@@ -362,7 +362,7 @@ a{
     position: fixed;
     top: 0;
     right:0;
-    z-index: 5;
+    z-index: 30;
     transition: all 0.3s ease-in-out;
 
     &.hidden{
@@ -491,6 +491,10 @@ a{
         div:first-child{
             z-index:10;
             position: relative;
+        }
+
+        div{
+            opacity:0;
         }
     }
 
@@ -719,9 +723,7 @@ a{
     li{
         line-height: 1.4;
         font-family: 'Heebo',sans-serif;
-        color:rgb(95, 95, 95);
-        
-        
+        color:rgb(95, 95, 95);          
 
         &::before{
             margin-right: 1.3em;
@@ -775,6 +777,7 @@ a{
 
             &:not(:first-child){
                 text-decoration: line-through;
+                color:$color-light;
 
                 &:hover{
                     cursor:default;

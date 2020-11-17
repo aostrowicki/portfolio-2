@@ -5,10 +5,16 @@ import Illustrations from '../components/Illustrations'
 import { NavContext } from '../context'
 import InView, { useInView } from 'react-intersection-observer'
 
+//preload
+import outdo from '../assets/websites/outdo.png'
+import barb from '../assets/websites/barb.png'
+import portfolio from '../assets/websites/portfolio-2.png'
+import pokecards from '../assets/websites/pokecards.png'
+
 export default function Work() {
 
     const categories = ['Websites', 'Web Apps', 'Illustrations'];
-    
+
     const [activeTab, setActiveTab] = useState(categories[0]);
     const { active, setActive } = useContext(NavContext);
 
@@ -17,7 +23,19 @@ export default function Work() {
     });
 
     useEffect(() => {
-        inView ? setActive('work') : '';
+        if (inView) {
+            setActive('work');
+            
+            //preload
+            const img1 = new Image();
+            const img2 = new Image();
+            const img3 = new Image();
+            const img4 = new Image();
+            img1.src = outdo;
+            img2.src = barb;
+            img3.src = portfolio;
+            img4.src = pokecards;
+        }
     }, [inView]);
 
     return (
