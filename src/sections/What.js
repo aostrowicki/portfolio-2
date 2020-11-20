@@ -67,8 +67,8 @@ export default function What() {
 
                 <div className="right" ref={listRef}>
                     <Feature img={des} title="Web Design" list={['Website Design', 'Wireframing', 'Figma', 'Adobe Xd', 'Adobe Illustrator']} />
-                    <Feature img={dev} title="Web Development" list={['HTML/CSS', 'JavaScript (ES6+)', 'React', 'Redux', 'Redux Thunk', 'Styled Components', 'AJAX/Fetch']} />
-                    <Feature img={tools} title="Other Skills" list={['GSAP', 'Git', 'Webpack', 'NPM']} />
+                    <Feature img={dev} title="Web Development" list={['HTML/CSS', 'JavaScript (ES6+)', 'React', 'Redux', 'Redux Thunk', 'Styled Components', 'AJAX/Fetch/Axios']} />
+                    <Feature img={tools} title="Other Skills" list={['GSAP', 'Canvas', 'Git', 'Webpack', 'NPM', 'RWD', 'BEM']} />
                 </div>
             </div>
         </section >

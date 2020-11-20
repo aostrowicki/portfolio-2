@@ -521,7 +521,7 @@ a{
 //////////////////////////// ABOUT
 
 #about{ 
-    padding: 16em 0 4em;
+    padding: 16em 0 5em;
     
     .container{
         width:100%;
@@ -536,7 +536,7 @@ a{
     }
 
     .left{
-        max-width:450px;
+        max-width:500px;
 
         .header{
             margin-bottom: 30px;
@@ -561,13 +561,13 @@ a{
 //////////////////////////// WHAT
 
 #what{
-    padding: 11em 0 15em;
+    padding: 9em 0 14em;
     
     .container{
         position: relative;
         display: flex;
         align-items: center;
-        height: 600px;
+        height: 640px;
     }
 
     .header{
@@ -775,9 +775,10 @@ a{
             cursor:pointer;
             white-space: nowrap;
 
-            &:not(:first-child){
+            &:nth-child(5){
                 text-decoration: line-through;
                 color:$color-light;
+                pointer-events: none;
 
                 &:hover{
                     cursor:default;
@@ -1010,7 +1011,7 @@ footer{
     }
 
     #what{
-        padding: 10em 0 12em;
+        padding: 9em 0 11em;
     }
 
     #what .circle svg {
@@ -1072,7 +1073,7 @@ footer{
     #about{
 
         .left{
-            max-width: 450px;
+            max-width: 500px;
         }
     }
 
@@ -1202,7 +1203,7 @@ footer{
     #what .container{
         flex-direction: column;
         align-items: flex-start;
-        height:640px;
+        height:760px;
         
 
         .left{
@@ -1218,7 +1219,7 @@ footer{
         }
 
         .circle{
-            bottom:0;
+            bottom:60px;
             overflow: visible;
 
             svg{
@@ -1379,7 +1380,6 @@ footer{
             text-align: left;
             margin-bottom: 45px;
             margin-top:15px;
-            font-size:31px;
         }
 
         .subtitle{
@@ -1402,7 +1402,7 @@ footer{
         padding: 8em 0 8em;
 
         .container{
-            height:540px;
+            height:600px;
 
             .left{
                 margin-bottom: 45px;
@@ -1414,8 +1414,8 @@ footer{
 
             .circle{
                 // display: none;
-                bottom:-40px;
                 left:-25px;
+                bottom: 0;
             }
         } 
     }
@@ -1425,7 +1425,7 @@ footer{
     }
     
     .header{
-        font-size:31px;
+        font-size:38px;
     }
 
     .subheader{

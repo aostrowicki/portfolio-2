@@ -1,16 +1,12 @@
 import React from 'react'
-import Icon from './Icon'
-import i1 from '../assets/websites/icons1.png'
-import i2 from '../assets/websites/icons2.png'
-import i3 from '../assets/websites/icons3.png'
+import Website from './Website'
+import frogame from '../assets/websites/frogger.jpg'
 
 export default function Icons() {
     return (
-        <div className="icons-grid">
-            <Icon title="test" img={i3} />
-            <Icon title="test" img={i2} />
-            <Icon title="test" img={i1} />
-            <Icon />
+        <div className="websites-grid">
+            <Website href="https://github.com/aostrowicki/frogame" githref="https://github.com/aostrowicki/frogame" img={frogame} title="Frogame" work={"Work in progress 🚧 Frogger game clone, created using Canvas and modern vanilla JavaScript."} tools={["JavaScript (ES6+)", "Canvas"]} />
+            <div></div>
         </div>
     )
 }

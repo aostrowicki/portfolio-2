@@ -595,7 +595,7 @@ a {
 }
 
 #about {
-  padding: 16em 0 4em;
+  padding: 16em 0 5em;
 }
 
 #about .container {
@@ -617,7 +617,7 @@ a {
 }
 
 #about .left {
-  max-width: 450px;
+  max-width: 500px;
 }
 
 #about .left .header {
@@ -637,7 +637,7 @@ a {
 }
 
 #what {
-  padding: 11em 0 15em;
+  padding: 9em 0 14em;
 }
 
 #what .container {
@@ -648,7 +648,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 600px;
+  height: 640px;
 }
 
 #what .header {
@@ -895,12 +895,13 @@ a {
   white-space: nowrap;
 }
 
-#work .categories .link:not(:first-child) {
+#work .categories .link:nth-child(5) {
   text-decoration: line-through;
   color: #474747;
+  pointer-events: none;
 }
 
-#work .categories .link:not(:first-child):hover {
+#work .categories .link:nth-child(5):hover {
   cursor: default;
   color: #474747;
 }
@@ -1138,7 +1139,7 @@ footer .links a:not(:first-child) {
     padding: 0 90px 0 70px;
   }
   #what {
-    padding: 10em 0 12em;
+    padding: 9em 0 11em;
   }
   #what .circle svg {
     width: 1210px;
@@ -1186,7 +1187,7 @@ footer .links a:not(:first-child) {
     grid-gap: 25px;
   }
   #about .left {
-    max-width: 450px;
+    max-width: 500px;
   }
   #what {
     padding-bottom: 6em;
@@ -1296,7 +1297,7 @@ footer .links a:not(:first-child) {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: 640px;
+    height: 760px;
   }
   #what .container .left {
     margin-bottom: 65px;
@@ -1308,7 +1309,7 @@ footer .links a:not(:first-child) {
     margin-left: 45px;
   }
   #what .container .circle {
-    bottom: 0;
+    bottom: 60px;
     overflow: visible;
   }
   #what .container .circle svg {
@@ -1440,7 +1441,6 @@ footer .links a:not(:first-child) {
     text-align: left;
     margin-bottom: 45px;
     margin-top: 15px;
-    font-size: 31px;
   }
   #hero .subtitle {
     font-size: 1em;
@@ -1457,7 +1457,7 @@ footer .links a:not(:first-child) {
     padding: 8em 0 8em;
   }
   #what .container {
-    height: 540px;
+    height: 600px;
   }
   #what .container .left {
     margin-bottom: 45px;
@@ -1466,14 +1466,14 @@ footer .links a:not(:first-child) {
     margin-left: 25px;
   }
   #what .container .circle {
-    bottom: -40px;
     left: -25px;
+    bottom: 0;
   }
   #what .feature .img-circle {
     margin-right: 30px;
   }
   .header {
-    font-size: 31px;
+    font-size: 38px;
   }
   .subheader {
     font-size: 20px;

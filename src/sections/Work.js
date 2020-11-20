@@ -10,6 +10,7 @@ import outdo from '../assets/websites/outdo.png'
 import barb from '../assets/websites/barb.png'
 import portfolio from '../assets/websites/portfolio-2.png'
 import pokecards from '../assets/websites/pokecards.png'
+import frogame from '../assets/websites/frogger.jpg'
 
 export default function Work() {
 
@@ -25,16 +26,18 @@ export default function Work() {
     useEffect(() => {
         if (inView) {
             setActive('work');
-            
+
             //preload
             const img1 = new Image();
             const img2 = new Image();
             const img3 = new Image();
             const img4 = new Image();
+            const img5 = new Image();
             img1.src = outdo;
             img2.src = barb;
             img3.src = portfolio;
             img4.src = pokecards;
+            img5.src = frogame;
         }
     }, [inView]);
 
@@ -44,7 +47,7 @@ export default function Work() {
                 <h1 className="header">My work</h1>
                 <div className="categories">
                     {categories.map(item => (
-                        <React.Fragment key={item}><span className={`link ${activeTab === item ? 'active' : ''}`} key={item}>{item}</span>
+                        <React.Fragment key={item}><span className={`link ${activeTab === item ? 'active' : ''}`} key={item} onClick={() => setActiveTab(item)}>{item}</span>
                             <span className="loader"></span></React.Fragment >
                     ))}
                 </div>
